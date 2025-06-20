@@ -1,0 +1,33 @@
+{
+  "name": "tfront",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "graphql-codegen --config graphql.config.ts && next dev --turbopack -p 3001",
+    "build": "graphql-codegen --config graphql.config.ts && next build --turbopack",
+    "start": "next start",
+    "lint": "next lint",
+    "codegen": "graphql-codegen --config graphql.config.ts"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.13.8",
+    "@graphql-codegen/cli": "^5.0.7",
+    "@graphql-codegen/typescript": "^4.1.6",
+    "@graphql-codegen/typescript-operations": "^4.6.1",
+    "@graphql-codegen/typescript-react-apollo": "^4.3.3",
+    "graphql": "^16.11.0",
+    "next": "15.3.4",
+    "next-intl": "^4.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@parcel/watcher": "^2.5.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
