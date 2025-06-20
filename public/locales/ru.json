@@ -1,5 +1,48 @@
 {
-  "home": {
-    "title": "Главная"
+  "auth": {
+    "register": {
+      "heading": "Регистрация",
+      "description": "Создайте новый аккаунт",
+      "backButtonLabel": "Уже есть аккаунт? Войти",
+      "usernameLabel": "Имя пользователя",
+      "usernameDescription": "Это ваше публичное имя пользователя.",
+      "usernamePlaceholder": "Введите ваше имя пользователя",
+      "emailLabel": "Электронная почта",
+      "emailDescription": "Это ваш адрес электронной почты.",
+      "emailPlaceholder": "Введите вашу электронную почту",
+      "passwordLabel": "Пароль",
+      "passwordDescription": "Это ваш пароль.",
+      "passwordPlaceholder": "********",
+      "createButton": "Создать",
+      "successAlertTitle": "Аккаунт успешно создан",
+      "successAlertDescription": "Пожалуйста, проверьте вашу электронную почту для подтверждения",
+      "errorMessage": "Произошла ошибка при создании вашего аккаунта"
+    },
+    "verify": {
+      "heading": "Подтвердите вашу электронную почту",
+      "successMessage": "Email успешно подтвержден",
+      "errorMessage": "Произошла ошибка при подтверждении вашей электронной почты"
+    },
+    "login": {
+      "heading": "Войдите в ваш аккаунт",
+      "description": "Введите вашу электронную почту и пароль для входа",
+      "backButtonLabel": "Нет аккаунта? Зарегистрироваться",
+      "loginLabel": "Войти",
+      "loginDescription": "Введите вашу электронную почту и пароль для входа",
+      "loginPlaceholder": "Введите вашу электронную почту",
+      "passwordLabel": "Пароль",
+      "passwordDescription": "Это ваш пароль.",
+      "passwordPlaceholder": "********",
+      "forgotPasswordLabel": "Забыли пароль?",
+      "forgotPasswordDescription": "Нажмите здесь, чтобы сбросить ваш пароль",
+      "loginButton": "Войти",
+      "successAlertTitle": "Вы успешно вошли в систему",
+      "errorMessage": "Произошла ошибка при входе в систему",
+      "pinLabel": "6-значный код",
+      "pinDescription": "Введите 6-значный код, отправленный на вашу электронную почту",
+      "pinPlaceholder": "Введите 6-значный код",
+      "pinButton": "Подтвердить",
+      "pinErrorMessage": "Произошла ошибка при подтверждении вашей электронной почты"
+    }
   }
 }

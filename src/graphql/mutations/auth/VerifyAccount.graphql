@@ -1,0 +1,8 @@
+mutation VerifyAccount($data: VerificationInput!) {
+  verifyAccount(input: $data) {
+    message
+    user: {
+        isEmailVerified
+    }
+  }
+}

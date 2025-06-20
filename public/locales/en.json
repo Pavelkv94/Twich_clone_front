@@ -1,5 +1,48 @@
 {
-  "home": {
-    "title": "Home"
+  "auth": {
+    "register": {
+      "heading": "Register Account",
+      "description": "Create a new account",
+      "backButtonLabel": "Already have an account? Login",
+      "usernameLabel": "Username",
+      "usernameDescription": "This is your public display name.",
+      "usernamePlaceholder": "Enter your username",
+      "emailLabel": "Email",
+      "emailDescription": "This is your email address.",
+      "emailPlaceholder": "Enter your email",
+      "passwordLabel": "Password",
+      "passwordDescription": "This is your password.",
+      "passwordPlaceholder": "********",
+      "createButton": "Create",
+      "successAlertTitle": "Account created successfully",
+      "successAlertDescription": "Please check your email for verification",
+      "errorMessage": "An error occurred while creating your account"
+    },
+    "verify": {
+      "heading": "Verify your email",
+      "successMessage": "Email verified successfully",
+      "errorMessage": "An error occurred while verifying your email"
+    },
+    "login": {
+      "heading": "Login to your account",
+      "description": "Enter your email and password to login",
+      "backButtonLabel": "Don't have an account? Register",
+      "loginLabel": "Login",
+      "loginDescription": "Enter your email and password to login",
+      "loginPlaceholder": "Enter your email",
+      "passwordLabel": "Password",
+      "passwordDescription": "This is your password.",
+      "passwordPlaceholder": "********",
+      "forgotPasswordLabel": "Forgot password?",
+      "forgotPasswordDescription": "Click here to reset your password",
+      "loginButton": "Login",
+      "successAlertTitle": "Logged in successfully",
+      "errorMessage": "An error occurred while logging in",
+      "pinLabel": "6 digit code",
+      "pinDescription": "Enter the 6 digit code sent to your email",
+      "pinPlaceholder": "Enter the 6 digit code",
+      "pinButton": "Verify",
+      "pinErrorMessage": "An error occurred while verifying your email"
+    }
   }
 }

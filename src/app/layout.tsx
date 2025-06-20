@@ -5,6 +5,7 @@ import { ApolloClientProvider } from "@/providers/ApolloClientProvider";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import { Toaster } from "@/providers/ToastProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +35,7 @@ export default async function RootLayout({
 
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -46,6 +47,7 @@ export default async function RootLayout({
               enableSystem
               disableTransitionOnChange
             >
+              <Toaster />
               {children}
             </ThemeProvider>
           </NextIntlClientProvider>
