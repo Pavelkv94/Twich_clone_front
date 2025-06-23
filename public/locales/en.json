@@ -43,6 +43,32 @@
       "pinPlaceholder": "Enter the 6 digit code",
       "pinButton": "Verify",
       "pinErrorMessage": "An error occurred while verifying your email"
+    },
+    "resetPassword": {
+      "heading": "Reset your password",
+      "description": "Enter your email to reset your password",
+      "backButtonLabel": "Back to login",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Enter your email",
+      "emailDescription": "Enter your email to reset your password",
+      "submitButton": "Reset password",
+      "successAlertTitle": "Password reset successfully",
+      "successAlertDescription": "Please check your email for the new password",
+      "errorMessage": "An error occurred while resetting your password"
+    },
+    "newPassword": {
+      "heading": "Create new password",
+      "description": "Enter your new password",
+      "backButtonLabel": "Back to login",
+      "passwordLabel": "Password",
+      "passwordDescription": "This is your password.",
+      "passwordPlaceholder": "********",
+      "passwordRepeatLabel": "Repeat password",
+      "passwordRepeatDescription": "Repeat your password",
+      "passwordRepeatPlaceholder": "********",
+      "submitButton": "Continue",
+      "successAlertTitle": "Password reset successfully",
+      "errorMessage": "An error occurred while resetting your password"
     }
   }
 }

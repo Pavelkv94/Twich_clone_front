@@ -43,6 +43,32 @@
       "pinPlaceholder": "Введите 6-значный код",
       "pinButton": "Подтвердить",
       "pinErrorMessage": "Произошла ошибка при подтверждении вашей электронной почты"
+    },
+    "resetPassword": {
+      "heading": "Сброс пароля",
+      "description": "Введите вашу электронную почту для сброса пароля",
+      "backButtonLabel": "Назад к входу",
+      "emailLabel": "Электронная почта",
+      "emailPlaceholder": "Введите вашу электронную почту",
+      "emailDescription": "Введите вашу электронную почту для сброса пароля",
+      "submitButton": "Сбросить пароль",
+      "successAlertTitle": "Пароль успешно сброшен",
+      "successAlertDescription": "Пожалуйста, проверьте вашу электронную почту для нового пароля",
+      "errorMessage": "Произошла ошибка при сбросе пароля"
+    },
+    "newPassword": {
+      "heading": "Создать новый пароль",
+      "description": "Введите ваш новый пароль",
+      "backButtonLabel": "Назад к входу",
+      "passwordLabel": "Пароль",
+      "passwordDescription": "Это ваш пароль.",
+      "passwordPlaceholder": "********",
+      "passwordRepeatLabel": "Повторите пароль",
+      "passwordRepeatDescription": "Повторите ваш пароль",
+      "passwordRepeatPlaceholder": "********",
+      "submitButton": "Продолжить",
+      "successAlertTitle": "Пароль успешно сброшен",
+      "errorMessage": "Произошла ошибка при сбросе пароля"
     }
   }
 }

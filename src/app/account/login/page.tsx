@@ -1,15 +1,15 @@
-import CreateAccountForm from "@/components/features/auth/forms/CreateAccountForm";
+import LoginForm from "@/components/features/auth/forms/LoginForm";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-    const t = await getTranslations('auth.register');
+    const t = await getTranslations('auth.login');
     return {
         title: t('heading'),
         description: t('description'),
     }
 }
 
-export default function CreateAccountPage() {
-    return <CreateAccountForm />;
+export default function LoginPage() {
+    return <LoginForm />;
 }
