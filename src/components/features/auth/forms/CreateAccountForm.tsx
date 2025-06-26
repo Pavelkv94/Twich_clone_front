@@ -6,12 +6,12 @@ import { CreateAccountSchema } from '@/schemas/auth/create-account.schema';
 import { createAccountSchema } from '@/schemas/auth/create-account.schema';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/shared/Form';
-import { Input } from '@/components/shared/Input';
-import { Button } from '@/components/shared/Button';
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/common/Form';
+import { Input } from '@/components/ui/common/Input';
+import { Button } from '@/components/ui/common/Button';
 import { useCreateUserMutation } from '@/graphql/generated/graphql';
 import { toast } from 'sonner';
-import { Alert, AlertDescription, AlertTitle } from '@/components/shared/Alert';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/common/Alert';
 import { CircleCheck } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 

@@ -1,7 +1,7 @@
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/shared/Card";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/common/Card";
 import { PropsWithChildren } from "react";
 import Image from "next/image";
-import { Button } from "@/components/shared/Button";
+import { Button } from "@/components/ui/common/Button";
 import Link from "next/link";
 
 type AuthWrapperProps = {

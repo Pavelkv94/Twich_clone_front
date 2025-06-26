@@ -4,16 +4,16 @@ import React, { useState } from 'react'
 import AuthWrapper from '../AuthWrapper'
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/shared/Form';
-import { Input } from '@/components/shared/Input';
-import { Button } from '@/components/shared/Button';
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/common/Form';
+import { Input } from '@/components/ui/common/Input';
+import { Button } from '@/components/ui/common/Button';
 import { useLoginUserMutation } from '@/graphql/generated/graphql';
 import { toast } from 'sonner';
 import { useTranslations } from 'next-intl';
 import { LoginSchema } from '@/schemas/auth/login.schema';
 import { loginSchema } from '@/schemas/auth/login.schema';
 import { useRouter } from 'next/navigation';
-import { InputOTP, InputOTPGroup, InputOTPSlot } from '@/components/shared/InputOtp';
+import { InputOTP, InputOTPGroup, InputOTPSlot } from '@/components/ui/common/InputOtp';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
 

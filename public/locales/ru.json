@@ -1,4 +1,54 @@
 {
+  "layout": {
+    "logo": {
+      "title": "EpicStream",
+      "description": "Платформа для стримов"
+    },
+    "headerMenu": {
+      "login": "Войти",
+      "register": "Регистрация",
+      "profileMenu": {
+        "logoutSuccess": "Вы успешно вышли из системы",
+        "channel": "Канал",
+        "dashboard": "Панель управления",
+        "logout": "Выйти",
+        "notifications": {
+          "heading": "Уведомления",
+          "loading": "Загрузка уведомлений...",
+          "empty": "Нет уведомлений"
+        }
+      }
+    },
+    "search": {
+      "placeholder": "Поиск"
+    },
+    "dashboardNav": {
+      "settings": "Настройки",
+      "streamSettings": "Настройки стрима",
+      "keys": "Ключи стрима",
+      "chatSettings": "Настройки чата",
+      "followers": "Подписчики",
+      "sponsors": "Спонсоры",
+      "premium": "Премиум",
+      "transactions": "Транзакции"
+    },
+    "sidebarHeader": {
+      "expand": "Развернуть",
+      "collapse": "Свернуть",
+      "navigation": "Навигация",
+      "forYou": "Для вас"
+    },
+    "userNav": {
+      "home": "Главная",
+      "categories": "Категории",
+      "streams": "Стримы",
+      "reccomended": "Рекомендованные"
+    },
+    "reccomended": {
+      "heading": "Рекомендации"
+    }
+  },
+
   "auth": {
     "register": {
       "heading": "Регистрация",

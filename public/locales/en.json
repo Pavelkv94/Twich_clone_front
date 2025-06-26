@@ -1,4 +1,53 @@
 {
+  "layout": {
+    "logo": {
+      "title": "EpicStream",
+      "description": "Stream platform"
+    },
+    "headerMenu": {
+      "login": "Login",
+      "register": "Register",
+      "profileMenu": {
+        "logoutSuccess": "Logged out successfully",
+        "channel": "Channel",
+        "dashboard": "Dashboard",
+        "logout": "Logout",
+        "notifications": {
+          "heading": "Notifications",
+          "loading": "Loading notifications...",
+          "empty": "No notifications"
+        }
+      }
+    },
+    "search": {
+      "placeholder": "Search"
+    },
+    "dashboardNav": {
+      "settings": "Settings",
+      "streamSettings": "Stream Settings",
+      "keys": "Stream Keys",
+      "chatSettings": "Chat Settings",
+      "followers": "Followers",
+      "sponsors": "Sponsors",
+      "premium": "Premium",
+      "transactions": "Transactions"
+    },
+    "sidebarHeader": {
+      "expand": "Expand",
+      "collapse": "Collapse",
+      "navigation": "Navigation",
+      "forYou": "For You"
+    },
+    "userNav": {
+      "home": "Home",
+      "categories": "Categories",
+      "streams": "Streams",
+      "reccomended": "Reccomended"
+    },
+    "reccomended": {
+      "heading": "Reccomendations"
+    }
+  },
   "auth": {
     "register": {
       "heading": "Register Account",
