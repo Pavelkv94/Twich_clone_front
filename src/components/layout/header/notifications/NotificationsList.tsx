@@ -7,7 +7,7 @@ import React, { Fragment } from 'react'
 import parse from 'html-react-parser';
 
 const NotificationsList = () => {
-    const t = useTranslations('layout.headerMenu.profileMenu.notifications');
+    const t = useTranslations('layout.header.headerMenu.profileMenu.notifications');
     const { refetch } = useFindUnreadNotificationsCountQuery();
 
 

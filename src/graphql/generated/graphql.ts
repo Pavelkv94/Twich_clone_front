@@ -614,6 +614,11 @@ export type VerifyAccountMutationVariables = Exact<{
 
 export type VerifyAccountMutation = { __typename?: 'Mutation', verifyAccount: { __typename?: 'UserModel', id: string, displayName: string, email: string, isEmailVerified: boolean } };
 
+export type FindReccomendedChannelsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type FindReccomendedChannelsQuery = { __typename?: 'Query', findRecommendedChannels: Array<{ __typename?: 'UserModel', username: string, avatar?: string | null, isVerified: boolean, stream?: { __typename?: 'StreamModel', isLive: boolean } | null }> };
+
 export type ClearSessionCookieMutationVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -832,6 +837,50 @@ export function useVerifyAccountMutation(baseOptions?: Apollo.MutationHookOption
 export type VerifyAccountMutationHookResult = ReturnType<typeof useVerifyAccountMutation>;
 export type VerifyAccountMutationResult = Apollo.MutationResult<VerifyAccountMutation>;
 export type VerifyAccountMutationOptions = Apollo.BaseMutationOptions<VerifyAccountMutation, VerifyAccountMutationVariables>;
+export const FindReccomendedChannelsDocument = gql`
+    query FindReccomendedChannels {
+  findRecommendedChannels {
+    username
+    avatar
+    isVerified
+    stream {
+      isLive
+    }
+  }
+}
+    `;
+
+/**
+ * __useFindReccomendedChannelsQuery__
+ *
+ * To run a query within a React component, call `useFindReccomendedChannelsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useFindReccomendedChannelsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useFindReccomendedChannelsQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useFindReccomendedChannelsQuery(baseOptions?: Apollo.QueryHookOptions<FindReccomendedChannelsQuery, FindReccomendedChannelsQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<FindReccomendedChannelsQuery, FindReccomendedChannelsQueryVariables>(FindReccomendedChannelsDocument, options);
+      }
+export function useFindReccomendedChannelsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<FindReccomendedChannelsQuery, FindReccomendedChannelsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<FindReccomendedChannelsQuery, FindReccomendedChannelsQueryVariables>(FindReccomendedChannelsDocument, options);
+        }
+export function useFindReccomendedChannelsSuspenseQuery(baseOptions?: Apollo.SkipToken | Apollo.SuspenseQueryHookOptions<FindReccomendedChannelsQuery, FindReccomendedChannelsQueryVariables>) {
+          const options = baseOptions === Apollo.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
+          return Apollo.useSuspenseQuery<FindReccomendedChannelsQuery, FindReccomendedChannelsQueryVariables>(FindReccomendedChannelsDocument, options);
+        }
+export type FindReccomendedChannelsQueryHookResult = ReturnType<typeof useFindReccomendedChannelsQuery>;
+export type FindReccomendedChannelsLazyQueryHookResult = ReturnType<typeof useFindReccomendedChannelsLazyQuery>;
+export type FindReccomendedChannelsSuspenseQueryHookResult = ReturnType<typeof useFindReccomendedChannelsSuspenseQuery>;
+export type FindReccomendedChannelsQueryResult = Apollo.QueryResult<FindReccomendedChannelsQuery, FindReccomendedChannelsQueryVariables>;
 export const ClearSessionCookieDocument = gql`
     mutation ClearSessionCookie {
   clearCookies

@@ -8,7 +8,7 @@ import React from 'react'
 import ProfileMenu from './ProfileMenu'
 
 const HeaderMenu = () => {
-    const t = useTranslations("layout.headerMenu")
+    const t = useTranslations("layout.header.headerMenu")
 
     const { isAuthenticated } = useAuth();
 
