@@ -125,9 +125,84 @@
       "errorMessage": "Произошла ошибка при сбросе пароля"
     }
   },
+  "dashboard": {
+    "settings": {
+      "header": {
+        "heading": "Настройки",
+        "description": "Управляйте вашими настройками и предпочтениями",
+        "profile": "Профиль",
+        "account": "Аккаунт",
+        "appearence": "Внешний вид",
+        "notifications": "Уведомления",
+        "sessions": "Сессии"
+      },
+      "profile": {
+        "header": {
+          "heading": "Профиль",
+          "description": "Установите аватар профиля и имя пользователя. Вы также можете изменить пароль здесь."
+        },
+        "avatar": {
+          "heading": "Аватар профиля",
+          "updateButton": "Обновить аватар",
+          "confirmModal": {
+            "heading": "Удалить аватар",
+            "message": "Вы уверены, что хотите удалить ваш аватар?"
+          },
+          "info": "Поддерживаемые форматы: JPG, PNG, GIF, WEBP, AVIF, SVG. Максимальный размер: 10MB.",
+          "successUpdateMessage": "Аватар успешно обновлен",
+          "errorUpdateMessage": "Произошла ошибка при обновлении вашего аватара",
+          "successRemoveMessage": "Аватар успешно удален",
+          "errorRemoveMessage": "Произошла ошибка при удалении вашего аватара"
+        },
+        "info": {
+          "heading": "Информация о профиле",
+          "usernameLabel": "Имя пользователя",
+          "usernamePlaceholder": "Введите ваше имя пользователя",
+          "usernameDescription": "Это ваше публичное имя пользователя.",
+          "displayNameLabel": "Имя пользователя",
+          "displayNamePlaceholder": "Введите ваше имя пользователя",
+          "displayNameDescription": "Это ваше имя пользователя.",
+          "bioLabel": "Биография",
+          "bioPlaceholder": "Введите вашу биографию",
+          "bioDescription": "Это ваша биография.",
+          "submitButton": "Сохранить",
+          "successUpdateMessage": "Информация о профиле успешно обновлена",
+          "errorUpdateMessage": "Произошла ошибка при обновлении информации о профиле"
+        },
+        "socialLinks": {
+          "createForm": {
+            "heading": "Социальные ссылки",
+            "titleLabel": "Заголовок",
+            "titlePlaceholder": "Введите заголовок",
+            "titleDescription": "Это заголовок социальной ссылки.",
+            "urlLabel": "URL",
+            "urlPlaceholder": "Введите URL",
+            "urlDescription": "Это URL социальной ссылки.",
+            "submitButton": "Создать",
+            "successUpdateMessage": "Социальная ссылка успешно создана",
+            "errorUpdateMessage": "Произошла ошибка при создании социальной ссылки"
+          },
+          "editForm": {
+            "cancelButton": "Отмена",
+            "submitButton": "Сохранить",
+            "successUpdateMessage": "Социальная ссылка успешно обновлена",
+            "errorUpdateMessage": "Произошла ошибка при обновлении социальной ссылки",
+            "successDeleteMessage": "Социальная ссылка успешно удалена",
+            "errorDeleteMessage": "Произошла ошибка при удалении социальной ссылки"
+          },
+          "successReorderMessage": "Социальные ссылки успешно переупорядочены",
+          "errorReorderMessage": "Произошла ошибка при переупорядочивании социальных ссылок"
+        }
+      }
+    }
+  },
   "components": {
     "liveBadge": {
       "text": "Эфир"
+    },
+    "configmModal": {
+      "cancelButton": "Отмена",
+      "confirmButton": "Подтвердить"
     }
   }
 }

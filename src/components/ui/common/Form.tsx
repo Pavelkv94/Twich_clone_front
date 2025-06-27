@@ -13,8 +13,8 @@ import {
     type FieldValues,
 } from "react-hook-form"
 
+import { Label } from "@/components/ui/common/Label"
 import { cn } from "@/utils/tw-merge"
-import { Label } from "./Label"
 
 const Form = FormProvider
 
@@ -22,7 +22,7 @@ type FormFieldContextValue<
     TFieldValues extends FieldValues = FieldValues,
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
 > = {
-    name: TName
+        name: TName
 }
 
 const FormFieldContext = React.createContext<FormFieldContextValue>(

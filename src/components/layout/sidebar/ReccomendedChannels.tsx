@@ -5,7 +5,7 @@ import { useFindReccomendedChannelsQuery } from '@/graphql/generated/graphql';
 import { useSidebar } from '@/hooks/useSidebar';
 import { useTranslations } from 'next-intl';
 import React from 'react'
-import ChannelItem from './ChannelItem';
+import ChannelItem, { ChangeItemSkeleton } from './ChannelItem';
 
 const ReccomendedChannels = () => {
     const t = useTranslations("layout.sidebar.reccomended");
@@ -20,7 +20,9 @@ const ReccomendedChannels = () => {
         <div>
             <Separator className='mb-3' />
             {!isCollapsed && <h2 className='text-lg mb-2 px-2 font-semibold text-foreground'>{t("heading")}</h2>}
-            {isLoading ? <div>Loading...</div> : channels.map((channel, index) => (
+            {isLoading ? Array.from({ length: 7 }).map((_, index) => (
+                <ChangeItemSkeleton key={index} />
+            )) : channels.map((channel, index) => (
                 <ChannelItem key={index} channel={channel} />
             ))}
         </div>

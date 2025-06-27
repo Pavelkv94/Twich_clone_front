@@ -23,7 +23,7 @@ const LayoutContainer = ({ children }: PropsWithChildren<unknown>) => {
     }, [isMobile]);
 
     return (
-        <main className={cn("mt-[95px] flex-1 px-8", isCollapsed ? "ml-16" : "ml-16 lg:ml-64")}>
+        <main className={cn("mt-[75px] flex-1 p-8", isCollapsed ? "ml-16" : "ml-16 lg:ml-64")}>
             {children}
         </main>
     )

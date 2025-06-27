@@ -11,6 +11,7 @@ import Link from 'next/link'
 import ChannelAvatar from '@/components/ui/elements/ChannelAvatar'
 import ChannelVerified from '@/components/ui/elements/ChannelVerified'
 import LiveBadge from '@/components/ui/elements/LiveBadge'
+import { Skeleton } from '@/components/ui/common/Skeleton'
 
 interface ChannelItemProps {
     channel: FindReccomendedChannelsQuery['findRecommendedChannels'][0]
@@ -49,3 +50,9 @@ const ChannelItem = ({ channel }: ChannelItemProps) => {
 }
 
 export default ChannelItem
+
+export function ChangeItemSkeleton() {
+    return (
+        <Skeleton className='mt-3 h-11 w-full rounded-full' />
+    )
+}

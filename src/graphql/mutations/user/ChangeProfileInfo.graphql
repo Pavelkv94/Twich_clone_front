@@ -1,0 +1,3 @@
+mutation ChangeProfileInfo($input: ChangeProfileInput!) {
+  changeProfile(input: $input)
+}

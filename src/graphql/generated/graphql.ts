@@ -614,6 +614,41 @@ export type VerifyAccountMutationVariables = Exact<{
 
 export type VerifyAccountMutation = { __typename?: 'Mutation', verifyAccount: { __typename?: 'UserModel', id: string, displayName: string, email: string, isEmailVerified: boolean } };
 
+export type ChangeProfileInfoMutationVariables = Exact<{
+  input: ChangeProfileInput;
+}>;
+
+
+export type ChangeProfileInfoMutation = { __typename?: 'Mutation', changeProfile: boolean };
+
+export type CreateSocialLinkMutationVariables = Exact<{
+  input: SocialLinkInput;
+}>;
+
+
+export type CreateSocialLinkMutation = { __typename?: 'Mutation', createSocialLink: boolean };
+
+export type RemoveSocialLinkMutationVariables = Exact<{
+  id: Scalars['String']['input'];
+}>;
+
+
+export type RemoveSocialLinkMutation = { __typename?: 'Mutation', deleteSocialLink: boolean };
+
+export type ReorderSocialLinksMutationVariables = Exact<{
+  list: Array<SocialLinkOrderInput> | SocialLinkOrderInput;
+}>;
+
+
+export type ReorderSocialLinksMutation = { __typename?: 'Mutation', reorderSocialLinks: boolean };
+
+export type UpdateSocialLinkMutationVariables = Exact<{
+  input: SocialLinkInput;
+}>;
+
+
+export type UpdateSocialLinkMutation = { __typename?: 'Mutation', updateSocialLink: boolean };
+
 export type FindReccomendedChannelsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -632,7 +667,12 @@ export type FindNotificationsByUserQuery = { __typename?: 'Query', findNotificat
 export type FindProfileQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type FindProfileQuery = { __typename?: 'Query', getMe: { __typename?: 'UserModel', username: string, email: string, displayName: string, avatar?: string | null } };
+export type FindProfileQuery = { __typename?: 'Query', getMe: { __typename?: 'UserModel', username: string, email: string, displayName: string, avatar?: string | null, bio?: string | null } };
+
+export type FindSocialLinksQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type FindSocialLinksQuery = { __typename?: 'Query', socialLinks: Array<{ __typename?: 'SocialLinkModel', position: number, title: string, url: string, id: string }> };
 
 export type FindUnreadNotificationsCountQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -837,6 +877,161 @@ export function useVerifyAccountMutation(baseOptions?: Apollo.MutationHookOption
 export type VerifyAccountMutationHookResult = ReturnType<typeof useVerifyAccountMutation>;
 export type VerifyAccountMutationResult = Apollo.MutationResult<VerifyAccountMutation>;
 export type VerifyAccountMutationOptions = Apollo.BaseMutationOptions<VerifyAccountMutation, VerifyAccountMutationVariables>;
+export const ChangeProfileInfoDocument = gql`
+    mutation ChangeProfileInfo($input: ChangeProfileInput!) {
+  changeProfile(input: $input)
+}
+    `;
+export type ChangeProfileInfoMutationFn = Apollo.MutationFunction<ChangeProfileInfoMutation, ChangeProfileInfoMutationVariables>;
+
+/**
+ * __useChangeProfileInfoMutation__
+ *
+ * To run a mutation, you first call `useChangeProfileInfoMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useChangeProfileInfoMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [changeProfileInfoMutation, { data, loading, error }] = useChangeProfileInfoMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useChangeProfileInfoMutation(baseOptions?: Apollo.MutationHookOptions<ChangeProfileInfoMutation, ChangeProfileInfoMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<ChangeProfileInfoMutation, ChangeProfileInfoMutationVariables>(ChangeProfileInfoDocument, options);
+      }
+export type ChangeProfileInfoMutationHookResult = ReturnType<typeof useChangeProfileInfoMutation>;
+export type ChangeProfileInfoMutationResult = Apollo.MutationResult<ChangeProfileInfoMutation>;
+export type ChangeProfileInfoMutationOptions = Apollo.BaseMutationOptions<ChangeProfileInfoMutation, ChangeProfileInfoMutationVariables>;
+export const CreateSocialLinkDocument = gql`
+    mutation CreateSocialLink($input: SocialLinkInput!) {
+  createSocialLink(input: $input)
+}
+    `;
+export type CreateSocialLinkMutationFn = Apollo.MutationFunction<CreateSocialLinkMutation, CreateSocialLinkMutationVariables>;
+
+/**
+ * __useCreateSocialLinkMutation__
+ *
+ * To run a mutation, you first call `useCreateSocialLinkMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useCreateSocialLinkMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [createSocialLinkMutation, { data, loading, error }] = useCreateSocialLinkMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useCreateSocialLinkMutation(baseOptions?: Apollo.MutationHookOptions<CreateSocialLinkMutation, CreateSocialLinkMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<CreateSocialLinkMutation, CreateSocialLinkMutationVariables>(CreateSocialLinkDocument, options);
+      }
+export type CreateSocialLinkMutationHookResult = ReturnType<typeof useCreateSocialLinkMutation>;
+export type CreateSocialLinkMutationResult = Apollo.MutationResult<CreateSocialLinkMutation>;
+export type CreateSocialLinkMutationOptions = Apollo.BaseMutationOptions<CreateSocialLinkMutation, CreateSocialLinkMutationVariables>;
+export const RemoveSocialLinkDocument = gql`
+    mutation RemoveSocialLink($id: String!) {
+  deleteSocialLink(id: $id)
+}
+    `;
+export type RemoveSocialLinkMutationFn = Apollo.MutationFunction<RemoveSocialLinkMutation, RemoveSocialLinkMutationVariables>;
+
+/**
+ * __useRemoveSocialLinkMutation__
+ *
+ * To run a mutation, you first call `useRemoveSocialLinkMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useRemoveSocialLinkMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [removeSocialLinkMutation, { data, loading, error }] = useRemoveSocialLinkMutation({
+ *   variables: {
+ *      id: // value for 'id'
+ *   },
+ * });
+ */
+export function useRemoveSocialLinkMutation(baseOptions?: Apollo.MutationHookOptions<RemoveSocialLinkMutation, RemoveSocialLinkMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<RemoveSocialLinkMutation, RemoveSocialLinkMutationVariables>(RemoveSocialLinkDocument, options);
+      }
+export type RemoveSocialLinkMutationHookResult = ReturnType<typeof useRemoveSocialLinkMutation>;
+export type RemoveSocialLinkMutationResult = Apollo.MutationResult<RemoveSocialLinkMutation>;
+export type RemoveSocialLinkMutationOptions = Apollo.BaseMutationOptions<RemoveSocialLinkMutation, RemoveSocialLinkMutationVariables>;
+export const ReorderSocialLinksDocument = gql`
+    mutation ReorderSocialLinks($list: [SocialLinkOrderInput!]!) {
+  reorderSocialLinks(list: $list)
+}
+    `;
+export type ReorderSocialLinksMutationFn = Apollo.MutationFunction<ReorderSocialLinksMutation, ReorderSocialLinksMutationVariables>;
+
+/**
+ * __useReorderSocialLinksMutation__
+ *
+ * To run a mutation, you first call `useReorderSocialLinksMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useReorderSocialLinksMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [reorderSocialLinksMutation, { data, loading, error }] = useReorderSocialLinksMutation({
+ *   variables: {
+ *      list: // value for 'list'
+ *   },
+ * });
+ */
+export function useReorderSocialLinksMutation(baseOptions?: Apollo.MutationHookOptions<ReorderSocialLinksMutation, ReorderSocialLinksMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<ReorderSocialLinksMutation, ReorderSocialLinksMutationVariables>(ReorderSocialLinksDocument, options);
+      }
+export type ReorderSocialLinksMutationHookResult = ReturnType<typeof useReorderSocialLinksMutation>;
+export type ReorderSocialLinksMutationResult = Apollo.MutationResult<ReorderSocialLinksMutation>;
+export type ReorderSocialLinksMutationOptions = Apollo.BaseMutationOptions<ReorderSocialLinksMutation, ReorderSocialLinksMutationVariables>;
+export const UpdateSocialLinkDocument = gql`
+    mutation UpdateSocialLink($input: SocialLinkInput!) {
+  updateSocialLink(input: $input)
+}
+    `;
+export type UpdateSocialLinkMutationFn = Apollo.MutationFunction<UpdateSocialLinkMutation, UpdateSocialLinkMutationVariables>;
+
+/**
+ * __useUpdateSocialLinkMutation__
+ *
+ * To run a mutation, you first call `useUpdateSocialLinkMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateSocialLinkMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateSocialLinkMutation, { data, loading, error }] = useUpdateSocialLinkMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateSocialLinkMutation(baseOptions?: Apollo.MutationHookOptions<UpdateSocialLinkMutation, UpdateSocialLinkMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateSocialLinkMutation, UpdateSocialLinkMutationVariables>(UpdateSocialLinkDocument, options);
+      }
+export type UpdateSocialLinkMutationHookResult = ReturnType<typeof useUpdateSocialLinkMutation>;
+export type UpdateSocialLinkMutationResult = Apollo.MutationResult<UpdateSocialLinkMutation>;
+export type UpdateSocialLinkMutationOptions = Apollo.BaseMutationOptions<UpdateSocialLinkMutation, UpdateSocialLinkMutationVariables>;
 export const FindReccomendedChannelsDocument = gql`
     query FindReccomendedChannels {
   findRecommendedChannels {
@@ -959,6 +1154,7 @@ export const FindProfileDocument = gql`
     email
     displayName
     avatar
+    bio
   }
 }
     `;
@@ -994,6 +1190,48 @@ export type FindProfileQueryHookResult = ReturnType<typeof useFindProfileQuery>;
 export type FindProfileLazyQueryHookResult = ReturnType<typeof useFindProfileLazyQuery>;
 export type FindProfileSuspenseQueryHookResult = ReturnType<typeof useFindProfileSuspenseQuery>;
 export type FindProfileQueryResult = Apollo.QueryResult<FindProfileQuery, FindProfileQueryVariables>;
+export const FindSocialLinksDocument = gql`
+    query FindSocialLinks {
+  socialLinks {
+    position
+    title
+    url
+    id
+  }
+}
+    `;
+
+/**
+ * __useFindSocialLinksQuery__
+ *
+ * To run a query within a React component, call `useFindSocialLinksQuery` and pass it any options that fit your needs.
+ * When your component renders, `useFindSocialLinksQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useFindSocialLinksQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useFindSocialLinksQuery(baseOptions?: Apollo.QueryHookOptions<FindSocialLinksQuery, FindSocialLinksQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<FindSocialLinksQuery, FindSocialLinksQueryVariables>(FindSocialLinksDocument, options);
+      }
+export function useFindSocialLinksLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<FindSocialLinksQuery, FindSocialLinksQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<FindSocialLinksQuery, FindSocialLinksQueryVariables>(FindSocialLinksDocument, options);
+        }
+export function useFindSocialLinksSuspenseQuery(baseOptions?: Apollo.SkipToken | Apollo.SuspenseQueryHookOptions<FindSocialLinksQuery, FindSocialLinksQueryVariables>) {
+          const options = baseOptions === Apollo.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
+          return Apollo.useSuspenseQuery<FindSocialLinksQuery, FindSocialLinksQueryVariables>(FindSocialLinksDocument, options);
+        }
+export type FindSocialLinksQueryHookResult = ReturnType<typeof useFindSocialLinksQuery>;
+export type FindSocialLinksLazyQueryHookResult = ReturnType<typeof useFindSocialLinksLazyQuery>;
+export type FindSocialLinksSuspenseQueryHookResult = ReturnType<typeof useFindSocialLinksSuspenseQuery>;
+export type FindSocialLinksQueryResult = Apollo.QueryResult<FindSocialLinksQuery, FindSocialLinksQueryVariables>;
 export const FindUnreadNotificationsCountDocument = gql`
     query FindUnreadNotificationsCount {
   findUnreadNotificationsCount
