@@ -1,8 +1,10 @@
+"use client"
+
 import { Button } from '@/components/ui/common/Button';
 import CardContainer from '@/components/ui/elements/CardContainer';
 import ConfigmModal from '@/components/ui/elements/ConfigmModal';
 import { useTranslations } from 'next-intl';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import React from 'react'
 
 const DeactivateCard = () => {

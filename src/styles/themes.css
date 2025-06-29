@@ -1,0 +1,88 @@
+.theme-violet {
+    --primary: #a64da6;
+    --primary-foreground: #fff;
+}
+
+.dark .theme-violet {
+    --primary: #660066;
+    --primary-foreground: #fff;
+}
+
+.theme-blue {
+    --primary: #4d4dff;
+    --primary-foreground: #fff;
+}
+
+.dark .theme-blue {
+    --primary: #0000cc;
+    --primary-foreground: #fff;
+}
+
+
+.theme-turquoise {
+    --primary: #66e6d6;
+    --primary-foreground: #000;
+}
+
+.dark .theme-turquoise {
+    --primary: #1a9999;
+    --primary-foreground: #fff;
+}
+
+
+.theme-yellow {
+    --primary: #ffff4d;
+    --primary-foreground: #000;
+}
+
+.dark .theme-yellow {
+    --primary: #cccc00;
+    --primary-foreground: #000;
+}
+
+
+.theme-peach {
+    --primary: #ffe6cc;
+    --primary-foreground: #000;
+}
+
+.dark .theme-peach {
+    --primary: #cc9966;
+    --primary-foreground: #000;
+}
+
+
+.theme-pink {
+    --primary: #ffd6e0;
+    --primary-foreground: #000;
+}
+
+.dark .theme-pink {
+    --primary: #cc9999;
+    --primary-foreground: #000;
+}
+
+
+.theme-rose {
+    --primary: #ff4da6;
+    --primary-foreground: #fff;
+}
+
+.dark .theme-rose {
+    --primary: #cc0052;
+    --primary-foreground: #fff;
+}
+
+
+.theme-red {
+    --primary: #ff4d4d;
+    --primary-foreground: #fff;
+}
+
+.dark .theme-red {
+    --primary: #cc0000;
+    --primary-foreground: #fff;
+}
+
+
+

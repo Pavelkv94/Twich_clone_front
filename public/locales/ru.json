@@ -277,6 +277,29 @@
           },
           "deactivateButton": "Деактивировать"
         }
+      },
+      "appearence": {
+        "header": {
+          "heading": "Внешний вид",
+          "description": "Управляйте вашими настройками внешнего вида"
+        },
+        "theme": {
+          "heading": "Тема",
+          "description": "Управляйте вашими настройками темы",
+          "successMessage": "Тема успешно обновлена",
+          "errorMessage": "Произошла ошибка при обновлении темы"
+        },
+        "language": {
+          "heading": "Язык",
+          "description": "Управляйте вашими настройками языка",
+          "selectPlaceholder": "Выберите язык",
+          "successMessage": "Язык успешно обновлен",
+          "errorMessage": "Произошла ошибка при обновлении языка"
+        },
+        "color": {
+          "heading": "Цвет",
+          "description": "Управляйте вашими настройками цвета"
+        }
       }
     }
   },

@@ -1,8 +1,8 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/common/Card";
 import { PropsWithChildren } from "react";
-import Image from "next/image";
 import { Button } from "@/components/ui/common/Button";
 import Link from "next/link";
+import LogoImage from "@/components/images/LogoImage";
 
 type AuthWrapperProps = {
     heading: string;
@@ -15,7 +15,7 @@ export default function AuthWrapper({ children, heading, backButtonLabel, backBu
     return <div className="flex h-full items-center justify-center">
         <Card className="w-[450px]">
             <CardHeader className="flex flex-row items-center justify-center gap-x-4">
-                <Image src="/images/logo.svg" alt="logo" width={40} height={40} />
+                <LogoImage />
                 <CardTitle>{heading}</CardTitle>
             </CardHeader>
             <CardContent>

@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./../styles/globals.css";
 import { ApolloClientProvider } from "@/providers/ApolloClientProvider";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import { Toaster } from "@/providers/ToastProvider";
+
+import "./../styles/globals.css";
+import "@/styles/themes.css";
+import ColorSwicher from "@/components/ui/elements/ColorSwicher";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,6 +42,8 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ColorSwicher />
+
         <ApolloClientProvider>
           <NextIntlClientProvider messages={messages}>
             <ThemeProvider

@@ -276,6 +276,29 @@
           },
           "deactivateButton": "Deactivate"
         }
+      },
+      "appearence": {
+        "header": {
+          "heading": "Appearence",
+          "description": "Manage your account appearence settings"
+        },
+        "theme": {
+          "heading": "Theme",
+          "description": "Manage your account theme settings",
+          "successMessage": "Theme updated successfully",
+          "errorMessage": "An error occurred while updating the theme"
+        },
+        "language": {
+          "heading": "Language",
+          "description": "Manage your account language settings",
+          "selectPlaceholder": "Select language",
+          "successMessage": "Language updated successfully",
+          "errorMessage": "An error occurred while updating the language"
+        },
+        "color": {
+          "heading": "Color",
+          "description": "Manage your account color settings"
+        }
       }
     }
   },
