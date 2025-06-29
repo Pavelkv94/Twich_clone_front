@@ -5,6 +5,10 @@ import React from 'react'
 import ChangeAvatarForm from './profile/ChangeAvatarForm';
 import ChangeInfoForm from './profile/ChangeInfoForm';
 import SocialLinksForm from './profile/social-links-form/SocialLinksForm';
+import ChangeEmailForm from './account/ChangeEmailForm';
+import ChangePasswordForm from './account/ChangePasswordForm';
+import WrapperTotp from './account/totp/WrapperTotp';
+import DeactivateCard from './account/DeactivateCard';
 
 const UserSettings = () => {
     const t = useTranslations("dashboard.settings");
@@ -29,7 +33,17 @@ const UserSettings = () => {
                         <SocialLinksForm />
                     </div>
                 </TabsContent>
-                <TabsContent value='account'>2</TabsContent>
+                <TabsContent value='account'>
+                    <div className='mt-5 space-y-6'>
+                        <Heading title={t("account.header.heading")} description={t("account.header.description")} />
+                        <ChangeEmailForm />
+                        <ChangePasswordForm />
+                        <Heading title={t("account.header.securityHeading")} description={t("account.header.securityDescription")} />
+                        <WrapperTotp />
+                        <Heading title={t("account.deactivation.heading")} description={t("account.deactivation.description")} />
+                        <DeactivateCard />
+                    </div>
+                </TabsContent>
                 <TabsContent value='appearence'>3</TabsContent>
                 <TabsContent value='notifications'>4</TabsContent>
                 <TabsContent value='sessions'>5</TabsContent>

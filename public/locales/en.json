@@ -122,6 +122,23 @@
       "submitButton": "Continue",
       "successAlertTitle": "Password reset successfully",
       "errorMessage": "An error occurred while resetting your password"
+    },
+    "deactivate": {
+      "heading": "Deactivate Account",
+      "description": "Enter your email and password to deactivate your account",
+      "backButtonLabel": "Back to settings",
+      "pinLabel": "6 digit code",
+      "pinDescription": "Enter the 6 digit code sent to your email",
+      "pinPlaceholder": "Enter the 6 digit code",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Enter your email",
+      "emailDescription": "Enter your email to deactivate your account",
+      "passwordLabel": "Password",
+      "passwordDescription": "This is your password.",
+      "passwordPlaceholder": "********",
+      "submitButton": "Deactivate",
+      "successAlertTitle": "Account deactivated successfully",
+      "errorMessage": "An error occurred while deactivating your account"
     }
   },
   "dashboard": {
@@ -191,6 +208,73 @@
           },
           "successReorderMessage": "Social links reordered successfully",
           "errorReorderMessage": "An error occurred while reordering the social links"
+        }
+      },
+      "account": {
+        "header": {
+          "heading": "Account",
+          "description": "Manage your account settings and preferences",
+          "securityHeading": "Security",
+          "securityDescription": "Manage your account security",
+          "deactivationHeading": "Deactivation",
+          "deactivationDescription": "Deactivate your account"
+        },
+        "email": {
+          "heading": "Email",
+          "emailLabel": "Email",
+          "emailDescription": "This is your email address. Enter your new email address to update your account.",
+          "submitButton": "Save",
+          "successUpdateMessage": "Email updated successfully",
+          "errorUpdateMessage": "An error occurred while updating your email"
+        },
+        "password": {
+          "heading": "Password",
+          "currentPasswordLabel": "Current Password",
+          "currentPasswordPlaceholder": "********",
+          "currentPasswordDescription": "This is your current password.",
+          "newPasswordLabel": "New Password",
+          "newPasswordPlaceholder": "********",
+          "newPasswordDescription": "This is your new password.",
+          "submitButton": "Save",
+          "successUpdateMessage": "Password updated successfully",
+          "errorUpdateMessage": "An error occurred while updating your password"
+        },
+        "twoFactor": {
+          "heading": "Two-Factor Authentication",
+          "description": "Manage your two-factor authentication settings",
+          "enable": {
+            "trigger": "Enable",
+            "heading": "Enable Two-Factor Authentication",
+            "description": "Enable two-factor authentication",
+            "qrInstruction": "Scan the QR code with your authenticator app",
+            "secretCodeLabel": "Secret Code: ",
+            "successMessage": "Two-factor authentication enabled successfully",
+            "errorMessage": "An error occurred while enabling two-factor authentication",
+            "codeLabel": "Code",
+            "codePlaceholder": "Enter the code",
+            "codeDescription": "This is the code to enable two-factor authentication.",
+            "submitButton": "Enable"
+          },
+          "disable": {
+            "trigger": "Disable",
+            "heading": "Disable Two-Factor Authentication",
+            "message": "After disabling two-factor authentication, you will not be able to login with your email and password. You will need to login with your email and the code sent to your email.",
+            "submitButton": "Disable",
+            "successMessage": "Two-factor authentication disabled successfully",
+            "errorMessage": "An error occurred while disabling two-factor authentication"
+          }
+        },
+        "deactivation": {
+          "heading": "Deactivation",
+          "description": "Deactivate your account",
+          "confirmModal": {
+            "heading": "Deactivate Account",
+            "message": "Are you sure you want to deactivate your account? You will not be able to login with your email and password. You will need to login with your email and the code sent to your email.",
+            "submitButton": "Deactivate",
+            "successMessage": "Account deactivated successfully",
+            "errorMessage": "An error occurred while deactivating your account"
+          },
+          "deactivateButton": "Deactivate"
         }
       }
     }
