@@ -299,6 +299,22 @@
           "heading": "Color",
           "description": "Manage your account color settings"
         }
+      },
+      "notifications": {
+        "header": {
+          "heading": "Notifications",
+          "description": "Manage your account notifications settings"
+        },
+        "siteNotifications": {
+          "heading": "Site Notifications",
+          "description": "Manage your site notifications settings"
+        },
+        "telegramNotifications": {
+          "heading": "Telegram Notifications",
+          "description": "Manage your telegram notifications settings"
+        },
+        "successMessage": "Notifications settings updated successfully",
+        "errorMessage": "An error occurred while updating the notifications settings"
       }
     }
   },

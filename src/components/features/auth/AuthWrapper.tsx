@@ -10,7 +10,6 @@ type AuthWrapperProps = {
     backButtonHref?: string;
 }
 
-
 export default function AuthWrapper({ children, heading, backButtonLabel, backButtonHref }: PropsWithChildren<AuthWrapperProps>) {
     return <div className="flex h-full items-center justify-center">
         <Card className="w-[450px]">

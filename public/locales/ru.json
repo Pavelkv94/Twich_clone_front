@@ -300,6 +300,22 @@
           "heading": "Цвет",
           "description": "Управляйте вашими настройками цвета"
         }
+      },
+      "notifications": {
+        "header": {
+          "heading": "Уведомления",
+          "description": "Управляйте вашими настройками уведомлений"
+        },
+        "siteNotifications": {
+          "heading": "Уведомления сайта",
+          "description": "Управляйте вашими настройками уведомлений сайта"
+        },
+        "telegramNotifications": {
+          "heading": "Уведомления в Telegram",
+          "description": "Управляйте вашими настройками уведомлений в Telegram"
+        },
+        "successMessage": "Настройки уведомлений успешно обновлены",
+        "errorMessage": "Произошла ошибка при обновлении настроек уведомлений"
       }
     }
   },
