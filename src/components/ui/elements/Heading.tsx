@@ -18,7 +18,7 @@ const headingSizes = cva("", {
 
 interface HeadingProps extends VariantProps<typeof headingSizes> {
     title: string,
-    description: string,
+    description?: string,
 }
 
 const Heading = ({ title, description, size }: HeadingProps) => {

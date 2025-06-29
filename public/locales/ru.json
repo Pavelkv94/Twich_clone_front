@@ -316,6 +316,36 @@
         },
         "successMessage": "Настройки уведомлений успешно обновлены",
         "errorMessage": "Произошла ошибка при обновлении настроек уведомлений"
+      },
+      "sessions": {
+        "header": {
+          "heading": "Сессии",
+          "description": "Управляйте вашими сессиями"
+        },
+        "info": {
+          "current": "Текущие сессии",
+          "active": "Активные сессии",
+          "inactive": "Неактивные сессии",
+          "noActiveSessions": "Нет активных сессий"
+        },
+        "sessionItem": {
+          "deleteButton": "Удалить",
+          "detailsButton": "Подробнее",
+          "confirmModal": {
+            "heading": "Удалить сессию",
+            "message": "Вы уверены, что хотите удалить эту сессию?"
+          },
+
+          "successDeleteMessage": "Сессия успешно удалена",
+          "errorDeleteMessage": "Произошла ошибка при удалении сессии"
+        },
+        "sessionModal": {
+          "heading": "Подробнее о сессии",
+          "device": "Устройство",
+          "location": "Местоположение",
+          "ipAddress": "IP-адрес",
+          "createdAt": "Дата создания"
+        }
       }
     }
   },

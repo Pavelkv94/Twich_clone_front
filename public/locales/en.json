@@ -315,6 +315,36 @@
         },
         "successMessage": "Notifications settings updated successfully",
         "errorMessage": "An error occurred while updating the notifications settings"
+      },
+      "sessions": {
+        "header": {
+          "heading": "Sessions",
+          "description": "Manage your account sessions"
+        },
+        "info": {
+          "current": "Current Session",
+          "active": "Active Sessions",
+          "inactive": "Inactive Sessions",
+          "noActiveSessions": "No active sessions"
+        },
+        "sessionItem": {
+          "deleteButton": "Delete",
+          "detailsButton": "Details",
+          "confirmModal": {
+            "heading": "Delete Session",
+            "message": "Are you sure you want to delete this session?"
+          },
+
+          "successDeleteMessage": "Session deleted successfully",
+          "errorDeleteMessage": "An error occurred while deleting the session"
+        },
+        "sessionModal": {
+          "heading": "Session Details",
+          "device": "Device",
+          "location": "Location",
+          "ipAddress": "IP Address",
+          "createdAt": "Created At"
+        }
       }
     }
   },
