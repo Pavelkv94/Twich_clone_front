@@ -24,9 +24,6 @@ const ChannelItem = ({ channel }: ChannelItemProps) => {
 
     const isActive = pathname === `/${channel.username}`;
 
-
-
-
     return isCollapsed ? <Hint label={channel.username} side='right' asChild>
         <Link href={`/${channel.username}`} className='mt-3 flex w-full items-center justify-center'>
             <ChannelAvatar channel={channel} isLive={channel.stream?.isLive} />

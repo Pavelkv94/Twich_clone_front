@@ -52,6 +52,10 @@
       }
     }
   },
+  "home": {
+    "streamsHeading": "Streams we think you'll like",
+    "categoriesHeading": "Categories you might like"
+  },
   "auth": {
     "register": {
       "heading": "Register Account",
@@ -507,6 +511,10 @@
     },
     "copyButton": {
       "successMessage": "Copied to clipboard"
+    },
+    "emptyState": {
+      "heading": "No results found",
+      "description": "We tried our best to find what you're looking for, but we couldn't find anything."
     }
   }
 }
