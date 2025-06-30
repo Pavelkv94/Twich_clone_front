@@ -346,6 +346,60 @@
           "createdAt": "Created At"
         }
       }
+    },
+    "keys": {
+      "header": {
+        "heading": "Stream Keys",
+        "description": "Manage your stream keys"
+      },
+      "url": {
+        "heading": "URL",
+        "description": "Stream URL"
+      },
+      "key": {
+        "heading": "Stream Key",
+        "description": "Stream Key"
+      },
+      "instructionModal": {
+        "trigger": "Instructions",
+        "heading": "Stream Keys",
+        "description": "Follow OBS studio instructions to start streaming.",
+        "step1Title": "Step 1: Download OBS Studio",
+        "step1Description": "Download OBS Studio from the official website. You should get server url and stream key for streaming.",
+        "downloadOBS": "Download OBS Studio",
+        "downloadOBSDescription": "Download OBS Studio from the official website. You should get server url and stream key for streaming.",
+        "obsLinkText": "OBS Studio",
+        "copyKeys": "Copy server url and stream key",
+        "copyKeysDescription": "After generation you will see two fileds: server url and stream key. Copy them and paste them into OBS Studio.",
+        "step2Title": "Step 2: Open OBS Studio",
+        "step2Description": "Open OBS Studio and go to the settings.",
+        "openOBS": "Open OBS Studio",
+        "openOBSDescription": "Open OBS Studio and go to the settings.",
+        "openStreamSettings": "Open Stream Settings",
+        "openStreamSettingsDescription": "Go to the stream settings and File => Settings => Stream",
+        "enterDetails": "Enter details",
+        "enterDetailsDescription": "In the Service field select Custom and enter the server url and stream key.",
+        "saveSettings": "Save settings",
+        "saveSettingsDescription": "Save the settings and go to the next step.",
+        "step3Title": "Step 3: Start streaming",
+        "step3Description": "After successfully saving the settings, you can start streaming.",
+        "startStreaming": "Start Streaming",
+        "startStreamingDescription": "Start streaming and enjoy your stream. Click on the start streaming button and enjoy your stream.",
+        "monitorStreaming": "Monitor Streaming",
+        "monitorStreamingDescription": "Monitor your streaming and enjoy your stream. Click on the monitor streaming button and enjoy your stream.",
+        "congratulations": "Congratulations! Now you can start streaming. Your followers will be able to watch your stream.",
+        "close": "Close"
+      },
+      "createModal": {
+        "trigger": "Create Stream Key",
+        "heading": "Create Stream Key",
+        "ingressTypeLabel": "Ingress Type",
+        "selectPlaceholder": "Select ingress type",
+        "ingressTypeDescription": "Select the ingress type for your stream key. RTMP is the most common type and is supported by most streaming platforms or you can use WHIP.",
+        "submitButton": "Generate",
+        "successMessage": "Stream key created successfully",
+        "errorMessage": "An error occurred while creating the stream key"
+      }
     }
   },
   "components": {
@@ -355,6 +409,9 @@
     "configmModal": {
       "cancelButton": "Cancel",
       "confirmButton": "Confirm"
+    },
+    "copyButton": {
+      "successMessage": "Copied to clipboard"
     }
   }
 }

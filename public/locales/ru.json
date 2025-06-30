@@ -347,6 +347,58 @@
           "createdAt": "Дата создания"
         }
       }
+    },
+    "keys": {
+      "header": {
+        "heading": "Ключи стрима",
+        "description": "Управляйте вашими ключами стрима"
+      },
+      "url": {
+        "heading": "URL"
+      },
+      "key": {
+        "heading": "Ключ стрима"
+      },
+      "instructionModal": {
+        "trigger": "Инструкции",
+        "heading": "Ключи стрима",
+        "description": "Следуйте инструкциям OBS Studio для начала стрима.",
+        "step1Title": "Шаг 1: Скачать OBS Studio",
+        "step1Description": "Скачайте OBS Studio с официального сайта. Вы должны получить URL-адрес сервера и ключ стрима для стрима.",
+        "downloadOBS": "Скачать OBS Studio",
+        "downloadOBSDescription": "Скачайте OBS Studio с официального сайта. Вы должны получить URL-адрес сервера и ключ стрима для стрима.",
+        "obsLinkText": "OBS Studio",
+        "copyKeys": "Скопировать URL-адрес сервера и ключ стрима",
+        "copyKeysDescription": "После генерации вы увидите два поля: URL-адрес сервера и ключ стрима. Скопируйте их и вставьте в OBS Studio.",
+        "step2Title": "Шаг 2: Открыть OBS Studio",
+        "step2Description": "Откройте OBS Studio и перейдите в настройки.",
+        "openOBS": "Открыть OBS Studio",
+        "openOBSDescription": "Откройте OBS Studio и перейдите в настройки.",
+        "openStreamSettings": "Открыть настройки стрима",
+        "openStreamSettingsDescription": "Перейдите в настройки стрима и выберите File => Settings => Stream",
+        "enterDetails": "Ввести детали",
+        "enterDetailsDescription": "В поле Service выберите Custom и введите URL-адрес сервера и ключ стрима.",
+        "saveSettings": "Сохранить настройки",
+        "saveSettingsDescription": "Сохраните настройки и перейдите к следующему шагу.",
+        "step3Title": "Шаг 3: Начать стрим",
+        "step3Description": "После успешной сохранения настроек вы можете начать стрим.",
+        "startStreaming": "Начать стрим",
+        "startStreamingDescription": "Начните стрим и наслаждайтесь им. Нажмите на кнопку начать стрим и наслаждайтесь им.",
+        "monitorStreaming": "Отслеживать стрим",
+        "monitorStreamingDescription": "Отслеживайте ваш стрим и наслаждайтесь им. Нажмите на кнопку отслеживать стрим и наслаждайтесь им.",
+        "congratulations": "Поздравляем! Теперь вы можете начать стрим. Ваши подписчики смогут смотреть ваш стрим.",
+        "close": "Закрыть"
+      },
+      "createModal": {
+        "trigger": "Создать ключ стрима",
+        "heading": "Создать ключ стрима",
+        "ingressTypeLabel": "Тип входа",
+        "selectPlaceholder": "Выберите тип входа",
+        "ingressTypeDescription": "Выберите тип входа для вашего ключа стрима. RTMP является наиболее распространенным типом и поддерживается большинством платформ для стриминга или вы можете использовать WHIP.",
+        "submitButton": "Сгенерировать",
+        "successMessage": "Ключ стрима успешно создан",
+        "errorMessage": "Произошла ошибка при создании ключа стрима"
+      }
     }
   },
   "components": {
@@ -356,6 +408,9 @@
     "configmModal": {
       "cancelButton": "Отмена",
       "confirmButton": "Подтвердить"
+    },
+    "copyButton": {
+      "successMessage": "Скопировано в буфер обмена"
     }
   }
 }
