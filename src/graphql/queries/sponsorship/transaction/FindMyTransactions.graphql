@@ -1,0 +1,8 @@
+query FindMyTransactions {
+  findMyTransactions {
+    id
+    createdAt
+    status
+    amount
+  }
+}

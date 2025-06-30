@@ -1,0 +1,8 @@
+query FindMySponsorhipPlans {
+  findMyPlans {
+    id
+    title
+    createdAt
+    price
+  }
+}

@@ -420,6 +420,81 @@
       },
       "successMessage": "Chat settings updated successfully",
       "errorMessage": "An error occurred while updating the chat settings"
+    },
+    "followers": {
+      "header": {
+        "heading": "Followers",
+        "description": "Manage your followers"
+      },
+      "columns": {
+        "date": "Date",
+        "user": "User",
+        "actions": "Actions",
+        "viewChannel": "View Channel"
+      }
+    },
+    "sponsors": {
+      "header": {
+        "heading": "Sponsors",
+        "description": "Manage your sponsors"
+      },
+      "columns": {
+        "date": "Date",
+        "user": "User",
+        "plan": "Plan",
+        "actions": "Actions",
+        "viewChannel": "View Channel"
+      }
+    },
+    "plans": {
+      "header": {
+        "heading": "Plans",
+        "description": "Manage your plans"
+      },
+      "alert": {
+        "heading": "Need channel verification",
+        "description": "You need to verify your channel to start sponsoring. Please contact support to verify your channel."
+      },
+      "createForm": {
+        "trigger": "Create Plan",
+        "heading": "Create Plan",
+        "titleLabel": "Title",
+        "titlePlaceholder": "Enter the title",
+        "titleDescription": "This is the title of the plan.",
+        "descriptionLabel": "Description",
+        "descriptionPlaceholder": "Enter the description",
+        "descriptionDescription": "This is the description of the plan.",
+        "priceLabel": "Price",
+        "pricePlaceholder": "Enter the price",
+        "priceDescription": "This is the price of the plan.",
+        "submitButton": "Create",
+        "successMessage": "Plan created successfully",
+        "errorMessage": "An error occurred while creating the plan"
+      },
+      "columns": {
+        "date": "Date",
+        "title": "Title",
+        "price": "Price",
+        "actions": "Actions",
+        "remove": "Remove",
+        "successRemoveMessage": "Plan removed successfully",
+        "errorRemoveMessage": "An error occurred while removing the plan"
+      }
+    },
+    "transactions": {
+      "header": {
+        "heading": "Transactions",
+        "description": "Manage your transactions"
+      },
+      "columns": {
+        "date": "Date",
+        "status": "Status",
+        "success": "Success",
+        "pending": "Pending",
+        "failed": "Failed",
+        "expired": "Expired",
+        "amount": "Amount"
+      }
     }
   },
   "components": {

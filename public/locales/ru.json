@@ -419,6 +419,81 @@
       },
       "successMessage": "Настройки чата успешно обновлены",
       "errorMessage": "Произошла ошибка при обновлении настроек чата"
+    },
+    "followers": {
+      "header": {
+        "heading": "Подписчики",
+        "description": "Управляйте вашими подписчиками"
+      },
+      "columns": {
+        "date": "Дата",
+        "user": "Пользователь",
+        "actions": "Действия",
+        "viewChannel": "Просмотр канала"
+      }
+    },
+    "sponsors": {
+      "header": {
+        "heading": "Спонсоры",
+        "description": "Управляйте вашими спонсорами"
+      },
+      "columns": {
+        "date": "Дата",
+        "user": "Пользователь",
+        "plan": "План",
+        "actions": "Действия",
+        "viewChannel": "Просмотр канала"
+      }
+    },
+    "plans": {
+      "header": {
+        "heading": "Планы",
+        "description": "Управляйте вашими планами"
+      },
+      "alert": {
+        "heading": "Нужна верификация канала",
+        "description": "Вам нужно верифицировать ваш канал, чтобы начать спонсировать. Пожалуйста, свяжитесь с поддержкой, чтобы верифицировать ваш канал."
+      },
+      "createForm": {
+        "trigger": "Создать план",
+        "heading": "Создать план",
+        "titleLabel": "Заголовок",
+        "titlePlaceholder": "Введите заголовок",
+        "titleDescription": "Это заголовок плана.",
+        "descriptionLabel": "Описание",
+        "descriptionPlaceholder": "Введите описание",
+        "descriptionDescription": "Это описание плана.",
+        "priceLabel": "Цена",
+        "pricePlaceholder": "Введите цену",
+        "priceDescription": "Это цена плана.",
+        "submitButton": "Создать",
+        "successMessage": "План успешно создан",
+        "errorMessage": "Произошла ошибка при создании плана"
+      },
+      "columns": {
+        "date": "Дата",
+        "title": "Заголовок",
+        "price": "Цена",
+        "actions": "Действия",
+        "remove": "Удалить",
+        "successRemoveMessage": "План успешно удален",
+        "errorRemoveMessage": "Произошла ошибка при удалении плана"
+      }
+    },
+    "transactions": {
+      "header": {
+        "heading": "Транзакции",
+        "description": "Управляйте вашими транзакциями"
+      },
+      "columns": {
+        "date": "Дата",
+        "status": "Статус",
+        "success": "Успешно",
+        "pending": "Ожидание",
+        "failed": "Неуспешно",
+        "expired": "Истек",
+        "amount": "Сумма"
+      }
     }
   },
   "components": {
