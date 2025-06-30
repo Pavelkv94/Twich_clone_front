@@ -400,6 +400,26 @@
         "successMessage": "Stream key created successfully",
         "errorMessage": "An error occurred while creating the stream key"
       }
+    },
+    "chat": {
+      "header": {
+        "heading": "Chat Settings",
+        "description": "Manage your chat settings"
+      },
+      "isChatEnabled": {
+        "heading": "Chat Enabled",
+        "description": "Enable or disable chat"
+      },
+      "isChatFollowersOnly": {
+        "heading": "Chat Followers Only",
+        "description": "Enable or disable chat for followers only"
+      },
+      "isChatPremiumFollowersOnly": {
+        "heading": "Chat Premium Followers Only",
+        "description": "Enable or disable chat for premium followers only"
+      },
+      "successMessage": "Chat settings updated successfully",
+      "errorMessage": "An error occurred while updating the chat settings"
     }
   },
   "components": {
