@@ -131,6 +131,20 @@
       }
     }
   },
+  "success": {
+    "heading": "Payment successful",
+    "description": "You are now supporting this streamer. Thank you for your support!",
+    "details": {
+      "heading": "Payment details",
+      "price": "Price",
+      "duration": "Duration",
+      "channel": "Channel"
+    },
+    "congratulations": "Congratulations! You are now supporting this streamer. Thank you for your support!",
+    "backToHome": "Back to home",
+    "backToChannel": "Back to channel",
+    "support": "If you have any questions, please contact support."
+  },
   "auth": {
     "register": {
       "heading": "Register Account",
