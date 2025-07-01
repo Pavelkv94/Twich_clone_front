@@ -66,6 +66,71 @@
     "heading": "Стримы",
     "searchHeading": "Поиск стримов"
   },
+  "stream": {
+    "video": {
+      "offline": "Не в сети",
+      "loading": "Загрузка...",
+      "player": {
+        "volume": "Громкость",
+        "fullScreen": {
+          "open": "Открыть полноэкранный режим",
+          "close": "Закрыть полноэкранный режим"
+        }
+      }
+    },
+    "info": {
+      "viewers": "Зрители",
+      "offline": "Не в сети"
+    },
+    "actions": {
+      "follow": {
+        "confirmUnfollowHeading": "Прекратить следить",
+        "confirmUnfollowMessage": "Вы уверены, что хотите прекратить следить за этим стримером?",
+        "unfollowButton": "Прекратить следить",
+        "followButton": "Следить",
+        "successUnfollowMessage": "Вы больше не следите за этим стримером",
+        "errorUnfollowMessage": "Произошла ошибка при прекращении слежения за этим стримером",
+        "successFollowMessage": "Вы теперь следите за этим стримером",
+        "errorFollowMessage": "Произошла ошибка при слежении за этим стримером"
+      },
+      "support": {
+        "alreadySponsoring": "Вы уже поддерживаете этого стримера",
+        "supportAuthor": "Поддержать этого стримера",
+        "perMonth": "в месяц",
+        "choose": "Выбрать",
+        "successSupportMessage": "Вы теперь поддерживаете этого стримера. Спасибо за вашу поддержку!",
+        "errorSupportMessage": "Произошла ошибка при поддержке этого стримера"
+      },
+      "share": {
+        "heading": "Поделиться"
+      }
+    },
+    "aboutChannel": {
+      "heading": "О канале",
+      "followersCount": "Подписчики",
+      "noDescription": "Нет описания"
+    },
+    "sponsors": {
+      "heading": "Спонсоры канала"
+    },
+    "chat": {
+      "heading": "Чат",
+      "unavailable": "Чат недоступен",
+      "unavailableMessage": "Чат недоступен для этого канала, когда стрим не в сети",
+      "loading": "Загрузка чата...",
+      "info": {
+        "authRequired": "Authentication required",
+        "chatDisabled": "Чат отключен",
+        "premiumFollowersOnly": "Только премиум-подписчики могут чатиться",
+        "followersOnly": "Только подписчики могут чатиться"
+      },
+      "sendMessage": {
+        "placeholder": "Отправить сообщение",
+        "emojiPlaceholder": "Добавить эмодзи",
+        "errorMessage": "Произошла ошибка при отправке сообщения"
+      }
+    }
+  },
   "auth": {
     "register": {
       "heading": "Регистрация",

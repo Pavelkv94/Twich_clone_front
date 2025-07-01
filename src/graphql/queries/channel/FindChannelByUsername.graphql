@@ -6,5 +6,8 @@ query FindChannelByUsername($username: String!) {
     avatar
     isVerified
     bio
+    stream {
+      thumbnailUrl
+    }
   }
 }

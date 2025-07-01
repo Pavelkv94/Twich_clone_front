@@ -1,0 +1,5 @@
+mutation GenerateStreamToken($input: StreamTokenInput!) {
+  generateStreamToken(input: $input) {
+    token
+  }
+}

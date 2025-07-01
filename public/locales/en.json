@@ -66,6 +66,71 @@
     "heading": "Streams",
     "searchHeading": "Search streams"
   },
+  "stream": {
+    "video": {
+      "offline": "Offline",
+      "loading": "Loading...",
+      "player": {
+        "volume": "Volume",
+        "fullScreen": {
+          "open": "Open full screen",
+          "close": "Close full screen"
+        }
+      }
+    },
+    "info": {
+      "viewers": "Viewers",
+      "offline": "Offline"
+    },
+    "actions": {
+      "follow": {
+        "confirmUnfollowHeading": "Stop following",
+        "confirmUnfollowMessage": "Are you sure you want to stop following this streamer?",
+        "unfollowButton": "Stop following",
+        "followButton": "Follow",
+        "successUnfollowMessage": "You are no longer following this streamer",
+        "errorUnfollowMessage": "An error occurred while unfollowing this streamer",
+        "successFollowMessage": "You are now following this streamer",
+        "errorFollowMessage": "An error occurred while following this streamer"
+      },
+      "support": {
+        "alreadySponsoring": "You are already supporting this streamer",
+        "supportAuthor": "Support this streamer",
+        "perMonth": "in a month",
+        "choose": "Choose",
+        "successSupportMessage": "You are now supporting this streamer. Thank you for your support!",
+        "errorSupportMessage": "An error occurred while supporting this streamer"
+      },
+      "share": {
+        "heading": "Share"
+      }
+    },
+    "aboutChannel": {
+      "heading": "About this channel",
+      "followersCount": "Followers",
+      "noDescription": "No description"
+    },
+    "sponsors": {
+      "heading": "Channel Sponsors"
+    },
+    "chat": {
+      "heading": "Chat",
+      "unavailable": "Chat is not available",
+      "unavailableMessage": "Chat is not available for this channel when stream is offline",
+      "loading": "Loading chat...",
+      "info": {
+        "authRequired": "Authentication required",
+        "chatDisabled": "Chat is disabled",
+        "premiumFollowersOnly": "Premium followers only",
+        "followersOnly": "Only followers can chat"
+      },
+      "sendMessage": {
+        "placeholder": "Send a message",
+        "emojiPlaceholder": "Add an emoji",
+        "errorMessage": "An error occurred while sending the message"
+      }
+    }
+  },
   "auth": {
     "register": {
       "heading": "Register Account",

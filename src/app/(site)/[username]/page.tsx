@@ -32,11 +32,10 @@ async function getChannelByUsername(username: string) {
 }
 
 export const generateMetadata = async ({ params }: { params: Promise<{ username: string }> }): Promise<Metadata> => {
-    const t = await getTranslations("channels");
     const { username } = await params;
     const { channel } = await getChannelByUsername(username);
     return {
-        title: `${t("heading")} | ${channel?.displayName}`,
+        title: channel?.displayName,
         description: channel?.bio || channel?.displayName,
         //todo for seo - images processing
         // openGraph: {
