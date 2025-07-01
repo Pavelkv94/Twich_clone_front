@@ -1,4 +1,4 @@
-import CategoriesList from "@/components/features/stream/list/CategoriesList";
+import CategoriesList from "@/components/features/category/CategoriesList";
 import StreamsList from "@/components/features/stream/list/StreamsList";
 import { FindRandomCategoriesDocument, FindRandomCategoriesQuery, FindRandomStreamsDocument, FindRandomStreamsQuery } from "@/graphql/generated/graphql";
 import { getTranslations } from "next-intl/server";

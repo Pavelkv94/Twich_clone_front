@@ -56,6 +56,16 @@
     "streamsHeading": "Streams we think you'll like",
     "categoriesHeading": "Categories you might like"
   },
+  "categories": {
+    "heading": "Categories",
+    "overview": {
+      "heading": "Category streams"
+    }
+  },
+  "streams": {
+    "heading": "Streams",
+    "searchHeading": "Search streams"
+  },
   "auth": {
     "register": {
       "heading": "Register Account",

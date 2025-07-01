@@ -22,7 +22,7 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
     }, []);
 
     return (
-        <Link href={`/category/${category.slug}`} className='w-full h-full space-y-3'>
+        <Link href={`/categories/${category.slug}`} className='w-full h-full space-y-3'>
             <div className={cn('group relative cursor-pointer rounded-xl', isCollapsed ? 'h-60' : 'h-52')}>
                 <div className='absolute inset-0 flex items-center justify-center rounded-xl opcity-0 transition-opacity group-hover:opacity-100' style={{ backgroundColor: randomColor }} />
                 <Image

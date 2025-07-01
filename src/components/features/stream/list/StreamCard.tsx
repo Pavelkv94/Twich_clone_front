@@ -4,6 +4,7 @@ import React from 'react'
 import StreamThumbnail from './StreamThumbnail';
 import ChannelAvatar from '@/components/ui/elements/ChannelAvatar';
 import ChannelVerified from '@/components/ui/elements/ChannelVerified';
+import { Skeleton } from '@/components/ui/common/Skeleton';
 
 interface StreamCardProps {
     stream: FindRandomStreamsQuery['findRandomStreams'][number];
@@ -23,7 +24,7 @@ const StreamCard = ({ stream }: StreamCardProps) => {
                         {stream.user.username}
                         {stream.user.isVerified && <ChannelVerified />}
                     </h2>
-                    {stream.category && <Link href={`/category/${stream.category.slug}`}
+                    {stream.category && <Link href={`/categories/${stream.category.slug}`}
                         className='text-muted-foreground'>
                         {stream.category.title}
                     </Link>}
@@ -34,3 +35,19 @@ const StreamCard = ({ stream }: StreamCardProps) => {
 }
 
 export default StreamCard
+
+export const StreamCardSkeleton = () => {
+    return (
+        <div className="h-full w-full">
+            <Skeleton className="relative aspect-video rounded-xl" />
+            <Skeleton className='mt-3 h-4 w-full' />
+            <div className="flex gap-x-4">
+                <Skeleton className='mt-3 size-10 rounded-full' />
+                <div className='mt-3.5 flex flex-col space-y-2'>
+                    <Skeleton className='h-3 w-20' />
+                    <Skeleton className='h-3 w-20' />
+                </div>
+            </div>
+        </div>
+    )
+}

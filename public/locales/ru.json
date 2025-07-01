@@ -56,6 +56,16 @@
     "streamsHeading": "Стримы, которые мы думаем, вам понравятся",
     "categoriesHeading": "Категории, которые вам могут понравиться"
   },
+  "categories": {
+    "heading": "Категории",
+    "overview": {
+      "heading": "Стримы категории"
+    }
+  },
+  "streams": {
+    "heading": "Стримы",
+    "searchHeading": "Поиск стримов"
+  },
   "auth": {
     "register": {
       "heading": "Регистрация",
