@@ -4,6 +4,7 @@ import FollowButton from './FollowButton';
 import SupportButton from './SupportButton';
 import ShareActions from './ShareActions';
 import { Skeleton } from '@/components/ui/common/Skeleton';
+import StreamSettings from '../../settings/StreamSettings';
 
 interface StreamActionsProps {
     channel: FindChannelByUsernameQuery['findChannelByUsername'];
@@ -14,6 +15,7 @@ const StreamActions = ({ channel }: StreamActionsProps) => {
         <div className='mt-5 lg:flex items-center lg:space-y-0 space-x-3 space-y-4 lg:margin-top-0'>
             <FollowButton channel={channel} />
             {channel.isVerified && channel.sponsorshipPlans && <SupportButton channel={channel} />}
+            <StreamSettings channel={channel} />
             <ShareActions channel={channel} />
         </div>
     )

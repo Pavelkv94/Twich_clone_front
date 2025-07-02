@@ -666,6 +666,13 @@ export type MakePaymentMutationVariables = Exact<{
 
 export type MakePaymentMutation = { __typename?: 'Mutation', makePayment: { __typename?: 'MakePaymentModel', url: string } };
 
+export type ChangeStreamInfoMutationVariables = Exact<{
+  input: ChangeStreamInfoInput;
+}>;
+
+
+export type ChangeStreamInfoMutation = { __typename?: 'Mutation', changeStreamInfo: boolean };
+
 export type CreateIngressMutationVariables = Exact<{
   ingressType: Scalars['Float']['input'];
 }>;
@@ -679,6 +686,11 @@ export type GenerateStreamTokenMutationVariables = Exact<{
 
 
 export type GenerateStreamTokenMutation = { __typename?: 'Mutation', generateStreamToken: { __typename?: 'TokenModel', token: string } };
+
+export type RemoveStreamThumbnailMutationVariables = Exact<{ [key: string]: never; }>;
+
+
+export type RemoveStreamThumbnailMutation = { __typename?: 'Mutation', removeStreamThumbnail: boolean };
 
 export type ChangeEmailMutationVariables = Exact<{
   input: ChangeEmailInput;
@@ -777,7 +789,7 @@ export type FindChannelByUsernameQueryVariables = Exact<{
 }>;
 
 
-export type FindChannelByUsernameQuery = { __typename?: 'Query', findChannelByUsername: { __typename?: 'UserModel', id: string, username: string, displayName: string, avatar?: string | null, isVerified: boolean, bio?: string | null, socialLinks?: Array<{ __typename?: 'SocialLinkModel', title: string, url: string }> | null, stream?: { __typename?: 'StreamModel', id: string, thumbnailUrl?: string | null, isLive: boolean, title: string, isChatEnabled: boolean, isChatFollowersOnly: boolean, isChatPremiumFollowersOnly: boolean, category?: { __typename?: 'CategoryModel', title: string } | null } | null, sponsorshipPlans?: Array<{ __typename?: 'PlanModel', title: string, description?: string | null, price: number, id: string }> | null, followings?: Array<{ __typename?: 'FollowModel', id: string }> | null } };
+export type FindChannelByUsernameQuery = { __typename?: 'Query', findChannelByUsername: { __typename?: 'UserModel', id: string, username: string, displayName: string, avatar?: string | null, isVerified: boolean, bio?: string | null, socialLinks?: Array<{ __typename?: 'SocialLinkModel', title: string, url: string }> | null, stream?: { __typename?: 'StreamModel', id: string, thumbnailUrl?: string | null, isLive: boolean, title: string, isChatEnabled: boolean, isChatFollowersOnly: boolean, isChatPremiumFollowersOnly: boolean, category?: { __typename?: 'CategoryModel', title: string, id: string } | null } | null, sponsorshipPlans?: Array<{ __typename?: 'PlanModel', title: string, description?: string | null, price: number, id: string }> | null, followings?: Array<{ __typename?: 'FollowModel', id: string }> | null } };
 
 export type FindReccomendedChannelsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -1308,6 +1320,37 @@ export function useMakePaymentMutation(baseOptions?: Apollo.MutationHookOptions<
 export type MakePaymentMutationHookResult = ReturnType<typeof useMakePaymentMutation>;
 export type MakePaymentMutationResult = Apollo.MutationResult<MakePaymentMutation>;
 export type MakePaymentMutationOptions = Apollo.BaseMutationOptions<MakePaymentMutation, MakePaymentMutationVariables>;
+export const ChangeStreamInfoDocument = gql`
+    mutation ChangeStreamInfo($input: ChangeStreamInfoInput!) {
+  changeStreamInfo(input: $input)
+}
+    `;
+export type ChangeStreamInfoMutationFn = Apollo.MutationFunction<ChangeStreamInfoMutation, ChangeStreamInfoMutationVariables>;
+
+/**
+ * __useChangeStreamInfoMutation__
+ *
+ * To run a mutation, you first call `useChangeStreamInfoMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useChangeStreamInfoMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [changeStreamInfoMutation, { data, loading, error }] = useChangeStreamInfoMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useChangeStreamInfoMutation(baseOptions?: Apollo.MutationHookOptions<ChangeStreamInfoMutation, ChangeStreamInfoMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<ChangeStreamInfoMutation, ChangeStreamInfoMutationVariables>(ChangeStreamInfoDocument, options);
+      }
+export type ChangeStreamInfoMutationHookResult = ReturnType<typeof useChangeStreamInfoMutation>;
+export type ChangeStreamInfoMutationResult = Apollo.MutationResult<ChangeStreamInfoMutation>;
+export type ChangeStreamInfoMutationOptions = Apollo.BaseMutationOptions<ChangeStreamInfoMutation, ChangeStreamInfoMutationVariables>;
 export const CreateIngressDocument = gql`
     mutation CreateIngress($ingressType: Float!) {
   createIngress(ingressType: $ingressType)
@@ -1372,6 +1415,36 @@ export function useGenerateStreamTokenMutation(baseOptions?: Apollo.MutationHook
 export type GenerateStreamTokenMutationHookResult = ReturnType<typeof useGenerateStreamTokenMutation>;
 export type GenerateStreamTokenMutationResult = Apollo.MutationResult<GenerateStreamTokenMutation>;
 export type GenerateStreamTokenMutationOptions = Apollo.BaseMutationOptions<GenerateStreamTokenMutation, GenerateStreamTokenMutationVariables>;
+export const RemoveStreamThumbnailDocument = gql`
+    mutation RemoveStreamThumbnail {
+  removeStreamThumbnail
+}
+    `;
+export type RemoveStreamThumbnailMutationFn = Apollo.MutationFunction<RemoveStreamThumbnailMutation, RemoveStreamThumbnailMutationVariables>;
+
+/**
+ * __useRemoveStreamThumbnailMutation__
+ *
+ * To run a mutation, you first call `useRemoveStreamThumbnailMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useRemoveStreamThumbnailMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [removeStreamThumbnailMutation, { data, loading, error }] = useRemoveStreamThumbnailMutation({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useRemoveStreamThumbnailMutation(baseOptions?: Apollo.MutationHookOptions<RemoveStreamThumbnailMutation, RemoveStreamThumbnailMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<RemoveStreamThumbnailMutation, RemoveStreamThumbnailMutationVariables>(RemoveStreamThumbnailDocument, options);
+      }
+export type RemoveStreamThumbnailMutationHookResult = ReturnType<typeof useRemoveStreamThumbnailMutation>;
+export type RemoveStreamThumbnailMutationResult = Apollo.MutationResult<RemoveStreamThumbnailMutation>;
+export type RemoveStreamThumbnailMutationOptions = Apollo.BaseMutationOptions<RemoveStreamThumbnailMutation, RemoveStreamThumbnailMutationVariables>;
 export const ChangeEmailDocument = gql`
     mutation ChangeEmail($input: ChangeEmailInput!) {
   changeEmail(input: $input)
@@ -1885,6 +1958,7 @@ export const FindChannelByUsernameDocument = gql`
       isChatPremiumFollowersOnly
       category {
         title
+        id
       }
     }
     sponsorshipPlans {

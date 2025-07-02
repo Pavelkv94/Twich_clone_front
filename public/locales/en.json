@@ -129,6 +129,33 @@
         "emojiPlaceholder": "Add an emoji",
         "errorMessage": "An error occurred while sending the message"
       }
+    },
+    "settings": {
+      "heading": "Stream Settings",
+
+      "thumbnail": {
+        "updateButton": "Update Thumbnail",
+        "confirmModal": {
+          "heading": "Update Thumbnail",
+          "message": "Are you sure you want to update the thumbnail?"
+        },
+        "info": "Supported formats: JPG, PNG, GIF, WEBP, AVIF, SVG. Max size: 10MB.",
+        "successUpdateMessage": "Thumbnail updated successfully",
+        "errorUpdateMessage": "An error occurred while updating the thumbnail",
+        "successRemoveMessage": "Thumbnail removed successfully",
+        "errorRemoveMessage": "An error occurred while removing the thumbnail"
+      },
+      "info": {
+        "titleLabel": "Title",
+        "titlePlaceholder": "Enter the title",
+        "titleDescription": "This is the title of the stream.",
+        "categoryLabel": "Category",
+        "categoryPlaceholder": "Select the category",
+        "categoryDescription": "This is the category of the stream.",
+        "submitButton": "Save",
+        "successUpdateMessage": "Stream info updated successfully",
+        "errorUpdateMessage": "An error occurred while updating the stream info"
+      }
     }
   },
   "success": {

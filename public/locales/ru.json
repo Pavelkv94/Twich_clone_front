@@ -129,6 +129,33 @@
         "emojiPlaceholder": "Добавить эмодзи",
         "errorMessage": "Произошла ошибка при отправке сообщения"
       }
+    },
+    "settings": {
+      "heading": "Настройки стрима",
+
+      "thumbnail": {
+        "updateButton": "Обновить превью",
+        "confirmModal": {
+          "heading": "Обновить превью",
+          "message": "Вы уверены, что хотите обновить превью?"
+        },
+        "info": "Поддерживаемые форматы: JPG, PNG, GIF, WEBP, AVIF, SVG. Максимальный размер: 10MB.",
+        "successUpdateMessage": "Превью успешно обновлено",
+        "errorUpdateMessage": "Произошла ошибка при обновлении превью",
+        "successRemoveMessage": "Превью успешно удалено",
+        "errorRemoveMessage": "Произошла ошибка при удалении превью"
+      },
+      "info": {
+        "titleLabel": "Заголовок",
+        "titlePlaceholder": "Введите заголовок",
+        "titleDescription": "Это заголовок стрима.",
+        "categoryLabel": "Категория",
+        "categoryPlaceholder": "Выберите категорию",
+        "categoryDescription": "Это категория стрима.",
+        "submitButton": "Сохранить",
+        "successUpdateMessage": "Информация о стриме успешно обновлена",
+        "errorUpdateMessage": "Произошла ошибка при обновлении информации о стриме"
+      }
     }
   },
   "success": {
