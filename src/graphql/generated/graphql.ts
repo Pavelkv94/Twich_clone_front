@@ -617,6 +617,20 @@ export type VerifyAccountMutationVariables = Exact<{
 
 export type VerifyAccountMutation = { __typename?: 'Mutation', verifyAccount: { __typename?: 'UserModel', id: string, displayName: string, email: string, isEmailVerified: boolean } };
 
+export type UpdateChatSettingsMutationVariables = Exact<{
+  input: ChatSettingsInput;
+}>;
+
+
+export type UpdateChatSettingsMutation = { __typename?: 'Mutation', updateChatSettings: boolean };
+
+export type SendMessageMutationVariables = Exact<{
+  input: SendMessageInput;
+}>;
+
+
+export type SendMessageMutation = { __typename?: 'Mutation', sendMessage: { __typename?: 'ChatMessageModel', streamId: string } };
+
 export type FollowChannelMutationVariables = Exact<{
   channelId: Scalars['String']['input'];
 }>;
@@ -651,13 +665,6 @@ export type MakePaymentMutationVariables = Exact<{
 
 
 export type MakePaymentMutation = { __typename?: 'Mutation', makePayment: { __typename?: 'MakePaymentModel', url: string } };
-
-export type UpdateChatSettingsMutationVariables = Exact<{
-  input: ChatSettingsInput;
-}>;
-
-
-export type UpdateChatSettingsMutation = { __typename?: 'Mutation', updateChatSettings: boolean };
 
 export type CreateIngressMutationVariables = Exact<{
   ingressType: Scalars['Float']['input'];
@@ -770,7 +777,7 @@ export type FindChannelByUsernameQueryVariables = Exact<{
 }>;
 
 
-export type FindChannelByUsernameQuery = { __typename?: 'Query', findChannelByUsername: { __typename?: 'UserModel', id: string, username: string, displayName: string, avatar?: string | null, isVerified: boolean, bio?: string | null, socialLinks?: Array<{ __typename?: 'SocialLinkModel', title: string, url: string }> | null, stream?: { __typename?: 'StreamModel', thumbnailUrl?: string | null, isLive: boolean, title: string, category?: { __typename?: 'CategoryModel', title: string } | null } | null, sponsorshipPlans?: Array<{ __typename?: 'PlanModel', title: string, description?: string | null, price: number, id: string }> | null, followings?: Array<{ __typename?: 'FollowModel', id: string }> | null } };
+export type FindChannelByUsernameQuery = { __typename?: 'Query', findChannelByUsername: { __typename?: 'UserModel', id: string, username: string, displayName: string, avatar?: string | null, isVerified: boolean, bio?: string | null, socialLinks?: Array<{ __typename?: 'SocialLinkModel', title: string, url: string }> | null, stream?: { __typename?: 'StreamModel', id: string, thumbnailUrl?: string | null, isLive: boolean, title: string, isChatEnabled: boolean, isChatFollowersOnly: boolean, isChatPremiumFollowersOnly: boolean, category?: { __typename?: 'CategoryModel', title: string } | null } | null, sponsorshipPlans?: Array<{ __typename?: 'PlanModel', title: string, description?: string | null, price: number, id: string }> | null, followings?: Array<{ __typename?: 'FollowModel', id: string }> | null } };
 
 export type FindReccomendedChannelsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -783,6 +790,13 @@ export type FindSponsorsByChannelQueryVariables = Exact<{
 
 
 export type FindSponsorsByChannelQuery = { __typename?: 'Query', findSponsorsByChannel: Array<{ __typename?: 'SubscriptionModel', user: { __typename?: 'UserModel', id: string, username: string, avatar?: string | null, isVerified: boolean } }> };
+
+export type FindMessagesByStreamIdQueryVariables = Exact<{
+  streamId: Scalars['String']['input'];
+}>;
+
+
+export type FindMessagesByStreamIdQuery = { __typename?: 'Query', findMessagesByStreamId: Array<{ __typename?: 'ChatMessageModel', id: string, message: string, createdAt: any, user: { __typename?: 'UserModel', id: string, username: string } }> };
 
 export type FindMyFollowersQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -867,6 +881,13 @@ export type RemoveSessionByIdMutationVariables = Exact<{
 
 
 export type RemoveSessionByIdMutation = { __typename?: 'Mutation', removeSessionById: string };
+
+export type ChatMessageAddedSubscriptionVariables = Exact<{
+  streamId: Scalars['String']['input'];
+}>;
+
+
+export type ChatMessageAddedSubscription = { __typename?: 'Subscription', chatMessageAdded: { __typename?: 'ChatMessageModel', id: string, message: string, createdAt: any, user: { __typename?: 'UserModel', id: string, username: string } } };
 
 
 export const CreateUserDocument = gql`
@@ -1066,6 +1087,70 @@ export function useVerifyAccountMutation(baseOptions?: Apollo.MutationHookOption
 export type VerifyAccountMutationHookResult = ReturnType<typeof useVerifyAccountMutation>;
 export type VerifyAccountMutationResult = Apollo.MutationResult<VerifyAccountMutation>;
 export type VerifyAccountMutationOptions = Apollo.BaseMutationOptions<VerifyAccountMutation, VerifyAccountMutationVariables>;
+export const UpdateChatSettingsDocument = gql`
+    mutation UpdateChatSettings($input: ChatSettingsInput!) {
+  updateChatSettings(input: $input)
+}
+    `;
+export type UpdateChatSettingsMutationFn = Apollo.MutationFunction<UpdateChatSettingsMutation, UpdateChatSettingsMutationVariables>;
+
+/**
+ * __useUpdateChatSettingsMutation__
+ *
+ * To run a mutation, you first call `useUpdateChatSettingsMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateChatSettingsMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateChatSettingsMutation, { data, loading, error }] = useUpdateChatSettingsMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useUpdateChatSettingsMutation(baseOptions?: Apollo.MutationHookOptions<UpdateChatSettingsMutation, UpdateChatSettingsMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<UpdateChatSettingsMutation, UpdateChatSettingsMutationVariables>(UpdateChatSettingsDocument, options);
+      }
+export type UpdateChatSettingsMutationHookResult = ReturnType<typeof useUpdateChatSettingsMutation>;
+export type UpdateChatSettingsMutationResult = Apollo.MutationResult<UpdateChatSettingsMutation>;
+export type UpdateChatSettingsMutationOptions = Apollo.BaseMutationOptions<UpdateChatSettingsMutation, UpdateChatSettingsMutationVariables>;
+export const SendMessageDocument = gql`
+    mutation SendMessage($input: SendMessageInput!) {
+  sendMessage(input: $input) {
+    streamId
+  }
+}
+    `;
+export type SendMessageMutationFn = Apollo.MutationFunction<SendMessageMutation, SendMessageMutationVariables>;
+
+/**
+ * __useSendMessageMutation__
+ *
+ * To run a mutation, you first call `useSendMessageMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useSendMessageMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [sendMessageMutation, { data, loading, error }] = useSendMessageMutation({
+ *   variables: {
+ *      input: // value for 'input'
+ *   },
+ * });
+ */
+export function useSendMessageMutation(baseOptions?: Apollo.MutationHookOptions<SendMessageMutation, SendMessageMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<SendMessageMutation, SendMessageMutationVariables>(SendMessageDocument, options);
+      }
+export type SendMessageMutationHookResult = ReturnType<typeof useSendMessageMutation>;
+export type SendMessageMutationResult = Apollo.MutationResult<SendMessageMutation>;
+export type SendMessageMutationOptions = Apollo.BaseMutationOptions<SendMessageMutation, SendMessageMutationVariables>;
 export const FollowChannelDocument = gql`
     mutation FollowChannel($channelId: String!) {
   follow(channelId: $channelId)
@@ -1223,37 +1308,6 @@ export function useMakePaymentMutation(baseOptions?: Apollo.MutationHookOptions<
 export type MakePaymentMutationHookResult = ReturnType<typeof useMakePaymentMutation>;
 export type MakePaymentMutationResult = Apollo.MutationResult<MakePaymentMutation>;
 export type MakePaymentMutationOptions = Apollo.BaseMutationOptions<MakePaymentMutation, MakePaymentMutationVariables>;
-export const UpdateChatSettingsDocument = gql`
-    mutation UpdateChatSettings($input: ChatSettingsInput!) {
-  updateChatSettings(input: $input)
-}
-    `;
-export type UpdateChatSettingsMutationFn = Apollo.MutationFunction<UpdateChatSettingsMutation, UpdateChatSettingsMutationVariables>;
-
-/**
- * __useUpdateChatSettingsMutation__
- *
- * To run a mutation, you first call `useUpdateChatSettingsMutation` within a React component and pass it any options that fit your needs.
- * When your component renders, `useUpdateChatSettingsMutation` returns a tuple that includes:
- * - A mutate function that you can call at any time to execute the mutation
- * - An object with fields that represent the current status of the mutation's execution
- *
- * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
- *
- * @example
- * const [updateChatSettingsMutation, { data, loading, error }] = useUpdateChatSettingsMutation({
- *   variables: {
- *      input: // value for 'input'
- *   },
- * });
- */
-export function useUpdateChatSettingsMutation(baseOptions?: Apollo.MutationHookOptions<UpdateChatSettingsMutation, UpdateChatSettingsMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useMutation<UpdateChatSettingsMutation, UpdateChatSettingsMutationVariables>(UpdateChatSettingsDocument, options);
-      }
-export type UpdateChatSettingsMutationHookResult = ReturnType<typeof useUpdateChatSettingsMutation>;
-export type UpdateChatSettingsMutationResult = Apollo.MutationResult<UpdateChatSettingsMutation>;
-export type UpdateChatSettingsMutationOptions = Apollo.BaseMutationOptions<UpdateChatSettingsMutation, UpdateChatSettingsMutationVariables>;
 export const CreateIngressDocument = gql`
     mutation CreateIngress($ingressType: Float!) {
   createIngress(ingressType: $ingressType)
@@ -1822,9 +1876,13 @@ export const FindChannelByUsernameDocument = gql`
       url
     }
     stream {
+      id
       thumbnailUrl
       isLive
       title
+      isChatEnabled
+      isChatFollowersOnly
+      isChatPremiumFollowersOnly
       category {
         title
       }
@@ -1964,6 +2022,52 @@ export type FindSponsorsByChannelQueryHookResult = ReturnType<typeof useFindSpon
 export type FindSponsorsByChannelLazyQueryHookResult = ReturnType<typeof useFindSponsorsByChannelLazyQuery>;
 export type FindSponsorsByChannelSuspenseQueryHookResult = ReturnType<typeof useFindSponsorsByChannelSuspenseQuery>;
 export type FindSponsorsByChannelQueryResult = Apollo.QueryResult<FindSponsorsByChannelQuery, FindSponsorsByChannelQueryVariables>;
+export const FindMessagesByStreamIdDocument = gql`
+    query FindMessagesByStreamId($streamId: String!) {
+  findMessagesByStreamId(streamId: $streamId) {
+    id
+    message
+    createdAt
+    user {
+      id
+      username
+    }
+  }
+}
+    `;
+
+/**
+ * __useFindMessagesByStreamIdQuery__
+ *
+ * To run a query within a React component, call `useFindMessagesByStreamIdQuery` and pass it any options that fit your needs.
+ * When your component renders, `useFindMessagesByStreamIdQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useFindMessagesByStreamIdQuery({
+ *   variables: {
+ *      streamId: // value for 'streamId'
+ *   },
+ * });
+ */
+export function useFindMessagesByStreamIdQuery(baseOptions: Apollo.QueryHookOptions<FindMessagesByStreamIdQuery, FindMessagesByStreamIdQueryVariables> & ({ variables: FindMessagesByStreamIdQueryVariables; skip?: boolean; } | { skip: boolean; }) ) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<FindMessagesByStreamIdQuery, FindMessagesByStreamIdQueryVariables>(FindMessagesByStreamIdDocument, options);
+      }
+export function useFindMessagesByStreamIdLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<FindMessagesByStreamIdQuery, FindMessagesByStreamIdQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<FindMessagesByStreamIdQuery, FindMessagesByStreamIdQueryVariables>(FindMessagesByStreamIdDocument, options);
+        }
+export function useFindMessagesByStreamIdSuspenseQuery(baseOptions?: Apollo.SkipToken | Apollo.SuspenseQueryHookOptions<FindMessagesByStreamIdQuery, FindMessagesByStreamIdQueryVariables>) {
+          const options = baseOptions === Apollo.skipToken ? baseOptions : {...defaultOptions, ...baseOptions}
+          return Apollo.useSuspenseQuery<FindMessagesByStreamIdQuery, FindMessagesByStreamIdQueryVariables>(FindMessagesByStreamIdDocument, options);
+        }
+export type FindMessagesByStreamIdQueryHookResult = ReturnType<typeof useFindMessagesByStreamIdQuery>;
+export type FindMessagesByStreamIdLazyQueryHookResult = ReturnType<typeof useFindMessagesByStreamIdLazyQuery>;
+export type FindMessagesByStreamIdSuspenseQueryHookResult = ReturnType<typeof useFindMessagesByStreamIdSuspenseQuery>;
+export type FindMessagesByStreamIdQueryResult = Apollo.QueryResult<FindMessagesByStreamIdQuery, FindMessagesByStreamIdQueryVariables>;
 export const FindMyFollowersDocument = gql`
     query FindMyFollowers {
   findMyFollowers {
@@ -2672,3 +2776,39 @@ export function useRemoveSessionByIdMutation(baseOptions?: Apollo.MutationHookOp
 export type RemoveSessionByIdMutationHookResult = ReturnType<typeof useRemoveSessionByIdMutation>;
 export type RemoveSessionByIdMutationResult = Apollo.MutationResult<RemoveSessionByIdMutation>;
 export type RemoveSessionByIdMutationOptions = Apollo.BaseMutationOptions<RemoveSessionByIdMutation, RemoveSessionByIdMutationVariables>;
+export const ChatMessageAddedDocument = gql`
+    subscription ChatMessageAdded($streamId: String!) {
+  chatMessageAdded(streamId: $streamId) {
+    id
+    message
+    createdAt
+    user {
+      id
+      username
+    }
+  }
+}
+    `;
+
+/**
+ * __useChatMessageAddedSubscription__
+ *
+ * To run a query within a React component, call `useChatMessageAddedSubscription` and pass it any options that fit your needs.
+ * When your component renders, `useChatMessageAddedSubscription` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the subscription, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useChatMessageAddedSubscription({
+ *   variables: {
+ *      streamId: // value for 'streamId'
+ *   },
+ * });
+ */
+export function useChatMessageAddedSubscription(baseOptions: Apollo.SubscriptionHookOptions<ChatMessageAddedSubscription, ChatMessageAddedSubscriptionVariables> & ({ variables: ChatMessageAddedSubscriptionVariables; skip?: boolean; } | { skip: boolean; }) ) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useSubscription<ChatMessageAddedSubscription, ChatMessageAddedSubscriptionVariables>(ChatMessageAddedDocument, options);
+      }
+export type ChatMessageAddedSubscriptionHookResult = ReturnType<typeof useChatMessageAddedSubscription>;
+export type ChatMessageAddedSubscriptionResult = Apollo.SubscriptionResult<ChatMessageAddedSubscription>;

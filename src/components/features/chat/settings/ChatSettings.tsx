@@ -5,8 +5,8 @@ import Heading from '@/components/ui/elements/Heading';
 import ToggleCard, { ToggleCardSkeleton } from '@/components/ui/elements/ToggleCard';
 import { useUpdateChatSettingsMutation } from '@/graphql/generated/graphql';
 import { useCurrent } from '@/hooks/useCurrent';
-import { ChangeChatSettingsSchema } from '@/schemas/stream/change-chat-settings.schema';
-import { changeChatSettingsSchema } from '@/schemas/stream/change-chat-settings.schema';
+import { ChangeChatSettingsSchema } from '@/schemas/chat/change-chat-settings.schema';
+import { changeChatSettingsSchema } from '@/schemas/chat/change-chat-settings.schema';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
 import React from 'react'
@@ -27,7 +27,7 @@ const ChatSettings = () => {
         },
     })
 
-    const [changeChatSettings, { loading }] = useUpdateChatSettingsMutation({
+    const [changeChatSettings, { loading: isLoadingUpdate }] = useUpdateChatSettingsMutation({
         onCompleted: (data) => {
             toast.success(t("successMessage"))
         },
@@ -88,6 +88,7 @@ const ChatSettings = () => {
                                 description={t("isChatPremiumFollowersOnly.description")}
                                 onChange={(value) => onChange("isChatPremiumFollowersOnly", value)}
                                 value={field.value}
+                                isDisabled={isLoadingUpdate || !user?.isVerified}
                             />
                         )}
                     />

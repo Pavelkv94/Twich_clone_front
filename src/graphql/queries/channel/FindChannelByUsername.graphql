@@ -11,9 +11,13 @@ query FindChannelByUsername($username: String!) {
       url
     }
     stream {
+      id
       thumbnailUrl
       isLive
       title
+      isChatEnabled
+      isChatFollowersOnly
+      isChatPremiumFollowersOnly
       category {
         title
       }

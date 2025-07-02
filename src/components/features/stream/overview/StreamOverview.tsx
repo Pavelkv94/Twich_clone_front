@@ -8,6 +8,7 @@ import StreamVideo, { StreamVideoSkeleton } from './player/StreamVideo';
 import StreamInfo, { StreamInfoSkeleton } from './info/StreamInfo';
 import AboutChannel, { AboutChannelSkeleton } from './info/AboutChannel';
 import ChannelSponsors from './info/ChannelSponsors';
+import LiveChat, { LiveChatSkeleton } from '../../chat/live/LiveChat';
 
 interface StreamOverviewProps {
     channel: FindChannelByUsernameQuery['findChannelByUsername'];
@@ -35,7 +36,12 @@ const StreamOverview = ({ channel }: StreamOverviewProps) => {
                 <ChannelSponsors channel={channel} />
             </div>
             <div className='order-2 col-span-1 flex h-80 flex-col space-y-6 lg:col-span-2'>
-                CHAT
+                <LiveChat
+                    channel={channel}
+                    isChatEnabled={channel.stream?.isChatEnabled ?? false}
+                    isChatFollowersOnly={channel.stream?.isChatFollowersOnly ?? false}
+                    isChatPremiumFollowersOnly={channel.stream?.isChatPremiumFollowersOnly ?? false}
+                />
             </div>
         </LiveKitRoom>
     )
@@ -52,6 +58,7 @@ export const StreamOverviewSkeleton = () => {
                 <AboutChannelSkeleton />
             </div>
             <div className='order-2 col-span-1 flex h-80 flex-col space-y-6 lg:col-span-2'>
+                <LiveChatSkeleton />
             </div>
         </div>
     )
