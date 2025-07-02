@@ -1,4 +1,5 @@
 import DeactivateForm from '@/components/features/auth/forms/DeactivateForm'
+import { NO_INDEX_NO_FOLLOW } from '@/libs/constants/seo.constants'
 import { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import React from 'react'
@@ -8,6 +9,7 @@ async function generateMetadata(): Promise<Metadata> {
     return {
         title: t("heading"),
         description: t("description"),
+        ...NO_INDEX_NO_FOLLOW,
     }
 }
 

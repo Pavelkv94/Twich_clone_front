@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/common/Button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/common/Card';
+import { NO_INDEX_NO_FOLLOW } from '@/libs/constants/seo.constants';
 import { CheckCircle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
@@ -12,10 +13,7 @@ export async function generateMetadata() {
     return {
         title: t('heading'),
         description: t('description'),
-        robots: {
-            index: false,
-            follow: false,
-        },
+        ...NO_INDEX_NO_FOLLOW,
     };
 }
 

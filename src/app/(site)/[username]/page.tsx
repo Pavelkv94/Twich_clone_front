@@ -2,7 +2,6 @@ import StreamOverview from "@/components/features/stream/overview/StreamOverview
 import EmptyState from "@/components/ui/elements/EmptyState";
 import { FindChannelByUsernameDocument, FindChannelByUsernameQuery } from "@/graphql/generated/graphql";
 import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
 
 
 async function getChannelByUsername(username: string) {

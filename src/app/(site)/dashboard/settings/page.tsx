@@ -1,4 +1,5 @@
 import UserSettings from "@/components/features/user/UserSettings";
+import { NO_INDEX_NO_FOLLOW } from "@/libs/constants/seo.constants";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
@@ -7,10 +8,7 @@ export const generateMetadata = async ({ params }: { params: { locale: string } 
     return {
         title: `${t("heading")} | Dashboard`,
         description: t("description"),
-        robots: {
-            index: false,
-            follow: false,
-        },
+        ...NO_INDEX_NO_FOLLOW,
     }
 }
 
