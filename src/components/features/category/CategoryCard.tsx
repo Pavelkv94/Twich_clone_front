@@ -7,7 +7,7 @@ import { useSidebar } from '@/hooks/useSidebar';
 import { getRandomColor } from '@/utils/color';
 import { cn } from '@/utils/tw-merge';
 import Image from 'next/image';
-import img from './2.jpg'
+import { getMediaSource } from '@/utils/get-media-source';
 
 interface CategoryCardProps {
     category: FindRandomCategoriesQuery['findRandomCategories'][number];
@@ -26,12 +26,11 @@ const CategoryCard = ({ category }: CategoryCardProps) => {
             <div className={cn('group relative cursor-pointer rounded-xl', isCollapsed ? 'h-60' : 'h-52')}>
                 <div className='absolute inset-0 flex items-center justify-center rounded-xl opcity-0 transition-opacity group-hover:opacity-100' style={{ backgroundColor: randomColor }} />
                 <Image
-                    // src={getMediaSource(url)}
-                    src={img}
-
+                    src={getMediaSource(category.thumbnailUrl)}
                     alt={category.title}
                     fill
                     className='rounded-xl object-cover transition-transform group-hover:translate-x-2 group-hover:-translate-y-2'
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
             </div>
             <h2 className='mt-3 text-base font-semibold truncate text-foreground hover:text-primary'>{category.title}</h2>

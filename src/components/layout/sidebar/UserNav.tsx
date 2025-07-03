@@ -11,7 +11,7 @@ const UserNav = () => {
     const routes: RouteItem[] = [
         {
             label: t("home"),
-            href: "/home",
+            href: "/",
             icon: Home
         },
         {

@@ -1,6 +1,5 @@
 import CategoriesList from "@/components/features/category/CategoriesList";
-import StreamsList from "@/components/features/stream/list/StreamsList";
-import { FindAllCategoriesDocument, FindAllCategoriesQuery, FindRandomCategoriesDocument, FindRandomCategoriesQuery, FindRandomStreamsDocument, FindRandomStreamsQuery } from "@/graphql/generated/graphql";
+import { FindAllCategoriesDocument, FindAllCategoriesQuery } from "@/graphql/generated/graphql";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 

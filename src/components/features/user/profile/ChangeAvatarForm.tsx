@@ -6,14 +6,17 @@ import { Skeleton } from '@/components/ui/common/Skeleton';
 import ChannelAvatar from '@/components/ui/elements/ChannelAvatar';
 import ConfigmModal from '@/components/ui/elements/ConfigmModal';
 import FormWrapper from '@/components/ui/elements/FormWrapper';
+import { useChangeProfileAvatarMutation, useRemoveProfileAvatarMutation } from '@/graphql/generated/graphql';
 import { useCurrent } from '@/hooks/useCurrent';
 import { UploadFileSchema } from '@/schemas/upload-file.schema';
 import { uploadFileSchema } from '@/schemas/upload-file.schema';
+import { getMediaSource } from '@/utils/get-media-source';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Trash2Icon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import React, { useRef } from 'react'
 import { Form, FormProvider, useForm } from 'react-hook-form';
+import { toast } from 'sonner';
 
 const ChangeAvatarForm = () => {
     const t = useTranslations("dashboard.settings.profile.avatar");
@@ -28,29 +31,43 @@ const ChangeAvatarForm = () => {
             file: user?.avatar ?? undefined
         }
     })
-    //todo get avatar from server when its will be working
-    //todo remove avatar from server when its will be working
+
+    const [changeAvatar, { loading: changeAvatarLoading }] = useChangeProfileAvatarMutation({
+        onCompleted: () => {
+            refetchProfile();
+            toast.success(t("successUpdateMessage"));
+        },
+        onError: () => {
+            toast.error(t("errorUpdateMessage"));
+        }
+    });
+
+    const [removeAvatar, { loading: removeAvatarLoading }] = useRemoveProfileAvatarMutation({
+        onCompleted: () => {
+            refetchProfile();
+            toast.success(t("successRemoveMessage"));
+        },
+        onError: () => {
+            toast.error(t("errorRemoveMessage"));
+        }
+    });
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
         if (file) {
             form.setValue("file", file);
+            changeAvatar({ variables: { file: file } });
         }
     }
 
     const handleRemoveAvatar = () => {
         form.setValue("file", undefined);
+        removeAvatar();
     }
-
-    const onSubmit = (data: UploadFileSchema) => {
-        console.log(data);
-    }
-
 
     return isLoadingProfile ? <ChangeAvatarSkeleton /> : (
         <FormWrapper heading={t("heading")}>
             <FormProvider {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)}>
                     <FormField control={form.control} name='file' render={({ field }) => (
                         <div className='px-5 pb-5'>
                             <div className='w-full items-center space-x-6 lg:flex'>
@@ -61,7 +78,7 @@ const ChangeAvatarForm = () => {
                                 <div className='space-y-3'>
                                     <div className='flex items-center gap-x-3'>
                                         <input type="file" ref={inputRef} className='hidden' onChange={handleFileChange} />
-                                        <Button variant='secondary' onClick={() => inputRef.current?.click()}>
+                                    <Button variant='secondary' onClick={() => inputRef.current?.click()} disabled={changeAvatarLoading || removeAvatarLoading}>
                                             {t("updateButton")}
                                         </Button>
                                         {!user?.avatar && (
@@ -77,8 +94,7 @@ const ChangeAvatarForm = () => {
                                 </div>
                             </div>
                         </div>
-                    )} />
-                </form>
+                )} />
             </FormProvider>
 
 

@@ -9,34 +9,31 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import img from './1.jpg'
 
-
-
 interface StreamThumbnailProps {
     url: string | null | undefined;
     user: any;
     isLive?: boolean;
 }
 
-
-
 const StreamThumbnail = ({ url, user, isLive }: StreamThumbnailProps) => {
     const [randomColor, setRandomColor] = useState('');
+    const [imgSrc, setImgSrc] = useState(getMediaSource(url) || img);
 
     useEffect(() => {
         setRandomColor(getRandomColor());
     }, []);
-
+    console.log(getMediaSource(url))
     return (
-        <div className="group relative aspect-video cursor-pointer rounded-lg">
-            <div className='absolute inset-0 flex items-center justify-center rounded-lg opcity-0 transition-opacity group-hover:opacity-100' style={{ backgroundColor: randomColor }} />
+        <div className="group relative aspect-video cursor-pointer rounded-xl">
+            <div className='absolute inset-0 flex items-center justify-center rounded-xl opcity-0 transition-opacity group-hover:opacity-100' style={{ backgroundColor: randomColor }} />
             {url ?
                 <Image
-                    // src={getMediaSource(url)}
-                    src={img}
-
+                    src={imgSrc}
                     alt={user.username}
                     fill
                     className='rounded-xl object-cover transition-transform group-hover:translate-x-2 group-hover:-translate-y-2'
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    onError={() => setImgSrc(img)}
                 /> :
                 <Card className='h-full w-full flex items-center justify-center gap-y-4 rounded-lg transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2'>
                     <ChannelAvatar channel={user} isLive={isLive} />

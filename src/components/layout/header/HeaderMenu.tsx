@@ -17,10 +17,10 @@ const HeaderMenu = () => {
             {
                 isAuthenticated ? <ProfileMenu /> : <>
                     <Link href="/account/login">
-                        <Button variant="secondary">{t("login")}</Button>
+                        <Button variant="secondary" className='cursor-pointer hover:opacity-80'>{t("login")}</Button>
                     </Link>
                     <Link href="/account/create">
-                        <Button>{t("register")}</Button>
+                        <Button className='cursor-pointer hover:opacity-80'>{t("register")}</Button>
                     </Link>
                 </>
             }

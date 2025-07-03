@@ -2,11 +2,11 @@ import { ApolloClient, createHttpLink, InMemoryCache, split } from "@apollo/clie
 import { SERVER_URL, WS_URL } from "./constants/url.constants";
 import { WebSocketLink } from "@apollo/client/link/ws";
 import { getMainDefinition } from "@apollo/client/utilities";
-import { Kind } from "graphql";
-//import createUploadLink from "apollo-upload-client/createUploadLink.mjs";
+import createUploadLink from "apollo-upload-client/createUploadLink.mjs";
+
 require("dotenv").config();
 
-const httpLink = createHttpLink({ //createUploadLink instead of createHttpLink when its will be working, for uploading files
+const httpLink = createUploadLink({ //createUploadLink instead of createHttpLink when its will be working, for uploading files
     uri: SERVER_URL,
     credentials: "include",
     headers: {

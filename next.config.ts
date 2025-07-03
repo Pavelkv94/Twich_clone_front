@@ -3,15 +3,13 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin('./src/libs/i18n/request.ts');
 
-
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  // TODO: for s3 bucket
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 's3.storage.test',
+        hostname: 's3.eu-north-1.amazonaws.com',
         port: '',
         pathname: '/**',
       }

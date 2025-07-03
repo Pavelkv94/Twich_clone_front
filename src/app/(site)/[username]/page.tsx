@@ -1,6 +1,7 @@
 import StreamOverview from "@/components/features/stream/overview/StreamOverview";
 import EmptyState from "@/components/ui/elements/EmptyState";
 import { FindChannelByUsernameDocument, FindChannelByUsernameQuery } from "@/graphql/generated/graphql";
+import { getMediaSource } from "@/utils/get-media-source";
 import { Metadata } from "next";
 
 
@@ -36,13 +37,12 @@ export const generateMetadata = async ({ params }: { params: Promise<{ username:
     return {
         title: channel?.displayName,
         description: channel?.bio || channel?.displayName,
-        //todo for seo - images processing
-        // openGraph: {
-        //     images: [{
-        //         url: getMediaSource(channel.avatar),
-        //         alt: channel.displayName,
-        //     }],
-        // }
+        openGraph: {
+            images: [{
+                url: getMediaSource(channel?.avatar),
+                alt: channel?.displayName,
+            }],
+        }
     }
 }
 

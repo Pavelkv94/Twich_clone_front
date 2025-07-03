@@ -17,7 +17,7 @@ const SocialLinksList = () => {
     const [socialLinks, setSocialLinks] = useState(items);
 
     useEffect(() => {
-        setSocialLinks(items);
+        // setSocialLinks(items);
     }, [items]);
 
     const [reorderSocialLinks, { loading: isReorderingSocialLinks }] = useReorderSocialLinksMutation({
