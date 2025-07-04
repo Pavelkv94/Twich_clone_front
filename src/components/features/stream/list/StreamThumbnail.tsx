@@ -22,7 +22,7 @@ const StreamThumbnail = ({ url, user, isLive }: StreamThumbnailProps) => {
     useEffect(() => {
         setRandomColor(getRandomColor());
     }, []);
-    console.log(getMediaSource(url))
+
     return (
         <div className="group relative aspect-video cursor-pointer rounded-xl">
             <div className='absolute inset-0 flex items-center justify-center rounded-xl opcity-0 transition-opacity group-hover:opacity-100' style={{ backgroundColor: randomColor }} />
