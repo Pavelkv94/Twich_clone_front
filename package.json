@@ -67,6 +67,7 @@
     "zustand": "^5.0.5"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.11.4",
     "@parcel/watcher": "^2.5.1",
     "@tailwindcss/postcss": "^4",
     "@types/apollo-upload-client": "^18.0.0",
