@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "dev": "graphql-codegen --config graphql.config.ts && next dev --turbopack -p 3001",
-    "build": "graphql-codegen --config graphql.config.ts && next build --turbopack",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "codegen": "graphql-codegen --config graphql.config.ts"
