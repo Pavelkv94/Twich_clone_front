@@ -29,7 +29,8 @@ async function getCategories() {
     }
 }
 
-export const generateMetadata = async ({ params }: { params: { locale: string } }): Promise<Metadata> => {
+export const generateMetadata = async ({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> => {
+    const { locale } = await params;
     const t = await getTranslations("categories");
     return {
         title: `${t("heading")} | Categories`,
